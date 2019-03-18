@@ -1,0 +1,28 @@
+{
+  "name": "go-horse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "start": "next start",
+    "build": "next build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rokoga/go-horse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rokoga/go-horse/issues"
+  },
+  "homepage": "https://github.com/rokoga/go-horse#readme",
+  "dependencies": {
+    "next": "^8.0.3",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  }
+}
