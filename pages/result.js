@@ -1,6 +1,12 @@
 import React from "react";
 import { withRouter } from "next/router";
-import { Head, SpecialResult, FailureResult, Result } from "../components";
+import {
+  Head,
+  SpecialResult,
+  FailureResult,
+  Result,
+  Donate
+} from "../components";
 
 export default withRouter(({ router }) => {
   let userResult;
@@ -21,6 +27,20 @@ export default withRouter(({ router }) => {
     <React.Fragment>
       <Head title="XGH Certification" />
       {userResult}
+      <div className="donate">
+        <Donate />
+      </div>
+      <style jsx>
+        {`
+          .donate {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          }
+        `}
+      </style>
     </React.Fragment>
   );
 });

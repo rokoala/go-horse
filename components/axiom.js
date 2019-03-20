@@ -122,7 +122,6 @@ export default () => (
     <style>
       {`
         ol{
-            list-style-type: upper-roman;
             margin:50px;
         }
         li{

@@ -12,15 +12,34 @@ class Exam extends React.PureComponent {
   state = {
     questions: [
       {
-        title: "Guess what is bla bla bla?",
-        items: ["yes", "no", "maybe"],
-        answer: 1,
+        title:
+          "If you found a bug in your code but nobody else notice. What do you do?",
+        items: [
+          "Create an issue",
+          "Try to fix immediately",
+          "If nobody else notice then pretend nothing happened"
+        ],
+        answer: 2,
         selection: ""
       },
       {
-        title: "Teste",
-        items: ["yes", "no", "maybe"],
-        answer: 1,
+        title: "Which one is the best option for development?",
+        items: [
+          "Scrum",
+          "XP",
+          "PMBOK",
+          "COBIT",
+          "XGH",
+          "REACT",
+          "ANGULARJS",
+          "LARAVEL",
+          "ANALYTICS",
+          "CATOPTROMANCY",
+          "DEIPNOSOPHIST",
+          "CHARMANDER",
+          "SPAGHETTIFICATION"
+        ],
+        answer: 4,
         selection: ""
       },
       {
@@ -34,8 +53,6 @@ class Exam extends React.PureComponent {
   };
   result = () =>
     this.state.questions.reduce((prevVal, question) => {
-      console.log(question.selection);
-      console.log(question.items[question.answer]);
       return (
         prevVal +
         (question.selection === question.items[question.answer] ? 1 : 0)
@@ -65,6 +82,7 @@ class Exam extends React.PureComponent {
   };
   handleTimeOver = () => {
     alert("TIME IS OVER");
+    const { router } = this.props;
     const result = this.result();
     router.push({
       pathname: "/result",

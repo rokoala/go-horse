@@ -17,17 +17,17 @@ const Go = () => {
 export default () => (
   <div className="content">
     <Head title="XGH Certification" />
-    <table>
+    <table className="full-w">
       <tbody>
         <tr>
           <td>
-            <img className="full-w" width="600" src="/static/title2.png" />
+            <img className="full-w" src="/static/title2.png" />
           </td>
         </tr>
       </tbody>
     </table>
     <img className="logo" width="250" src="/static/logo.png" />
-    <section>
+    <section className="full-w">
       <p>
         <marquee className="get-certification">
           UNBELIEVABLE! SHOCKING! NOW AVAILABLE! MUST HAVE! GOOD FOR BIG DATA,
@@ -41,7 +41,9 @@ export default () => (
       {/* <Link href="/exam"> */}
       {/* <a>Go Now</a> */}
       {/* </Link> */}
-      <button onClick={Go}>🐴 Go Horse Now</button>
+      <button className="full-w" onClick={Go}>
+        🐴 Go Horse Now
+      </button>
     </section>
     <section className="axioms">
       <h3>DON'T YOU KNOW WHAT XGH IS ?</h3>
@@ -50,7 +52,7 @@ export default () => (
     </section>
     <section className="speed-container">
       <h3 align="center">SPEED COMPARISON</h3>
-      <p>Just how fast EXTREME GO HORSE really is:</p>
+      <p className="sm-margin">Just how fast EXTREME GO HORSE really is:</p>
       <div className="speed-comparison">
         <div className="finish">FINISH</div>
         <div className="running-track">
@@ -102,7 +104,7 @@ export default () => (
           background: white;
         }
         .full-w {
-          width: 100vw;
+          width: 100%;
         }
         .logo {
           border-width: 7px;
@@ -133,14 +135,16 @@ export default () => (
           font-weight: bold;
         }
         button {
-          width: 100vw;
           height: 65px;
           font-size: 20px;
           text-shadow: 1px 2px 3px red;
           color: yellow;
         }
+        .sm-margin {
+          margin: 10px;
+        }
         .speed-container {
-          width: 100vw;
+          width: 100%;
           margin: 20px 0;
         }
         .speed-comparison {
@@ -170,7 +174,7 @@ export default () => (
           border-top: 1px solid gray;
           background-color: white;
           height: 200px;
-          width: 100vw;
+          width: 100%;
           padding: 15px;
         }
       `}
