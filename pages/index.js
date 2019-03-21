@@ -3,24 +3,22 @@ import Router from "next/router";
 import Link from "next/link";
 import { i18n, withNamespaces } from "../i18n";
 
-const Go = () => {
-  const name = prompt("🐴💬 \nEnter your name:", "");
-  if (name == null || name == "") {
-    alert("PROVIDE THE NAME!  ");
-  } else {
-    alert(
-      "🐴💬\n LET'S GO 😀 \n ⚠️YOU HAVE ⏰ 02 MINUTES AND 34 SECONDS ⏰ TO ANSWER THIS EXAM ⚠️ "
-    );
-    Router.push({ pathname: "/exam", query: { name } }, "/exam");
-  }
-};
-
 class Index extends React.PureComponent {
   static async getInitialProps() {
     return {
       namespacesRequired: ["index"]
     };
   }
+  go = () => {
+    const { t } = this.props;
+    const name = prompt(t("enter-name"), "");
+    if (name == null || name == "") {
+      alert(t("provide-name"));
+    } else {
+      alert(t("time-alert"));
+      Router.push({ pathname: "/exam", query: { name } }, "/exam");
+    }
+  };
   render() {
     const { t } = this.props;
 
@@ -39,31 +37,23 @@ class Index extends React.PureComponent {
         <img className="logo" width="250" src="/static/logo.png" />
         <section className="full-w">
           <p>
-            <marquee className="get-certification">
-              UNBELIEVABLE! SHOCKING! NOW AVAILABLE! MUST HAVE! GOOD FOR BIG
-              DATA, HTML5, CSS3, BLOCKCHAIN, MACHINELEARNING, DATASCIENCE,
-              CHATBOT, IOT, DEVOPS, VR, DRONES, ANALYTICS, MICROSERVICES,
-              GAMIFICATION
-            </marquee>
+            <marquee className="get-certification">{t("marquee")}</marquee>
           </p>
           <p align="center" className="blink certificate">
-            {t("get")}
+            {t("get-now")}
           </p>
-          {/* <Link href="/exam"> */}
-          {/* <a>Go Now</a> */}
-          {/* </Link> */}
-          <button className="full-w" onClick={Go}>
-            🐴 Go Horse Now
+          <button className="full-w" onClick={this.go}>
+            🐴 Go Horse
           </button>
         </section>
         <section className="axioms">
-          <h3>DON'T YOU KNOW WHAT XGH IS ?</h3>
+          <h3>{t("what-xgh")}</h3>
           <img src="/static/axioms.gif" />
           <Axiom />
         </section>
         <section className="speed-container">
-          <h3 align="center">SPEED COMPARISON</h3>
-          <p className="sm-margin">Just how fast EXTREME GO HORSE really is:</p>
+          <h3 align="center">{t("speed-comparison")}</h3>
+          <p className="sm-margin">{t("how-speed-comparison")}</p>
           <div className="speed-comparison">
             <div className="finish">FINISH</div>
             <div className="running-track">
@@ -86,20 +76,17 @@ class Index extends React.PureComponent {
           </div>
         </section>
         <section>
-          <h3>CERTIFIED XGH USERS</h3>
+          <h3>{t("certified-users")}</h3>
         </section>
         <section>
-          <h3>CERTIFIED XGH COMPANIES</h3>
+          <h3>{t("certified-companies")}</h3>
         </section>
         <footer>
-          {/* <Link href="/termsofservice">
-        <a>Share your story with us</a>
-      </Link> */}
           <Link href="/termsofservice">
-            <a>Terms of Service</a>
+            <a>{t("terms-of-service")}</a>
           </Link>
           <Link href="/termsofservice">
-            <a>Contact us</a>
+            <a>{t("contact-us")}</a>
           </Link>
         </footer>
         <style jsx>

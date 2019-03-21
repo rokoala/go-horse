@@ -1,13 +1,14 @@
 import React from "react";
+import { withNamespaces } from "../i18n";
 
-export default ({ name }) => (
+const SpecialResult = ({ t, name }) => (
   <section>
-    <h1>Congratulations</h1>
+    <h1>{t("congratulations")}</h1>
     <h2>{name}</h2>
-    <h2>Your score is over</h2>
-    <p>9000%</p>
+    <h2>{t("your-score")}</h2>
+    <p>IS OVER 9000%</p>
     <img width="200" src="/static/genius-meme.jpg" />
-    <button>Print your certificate</button>
+    <button>{t("print-certificate")}</button>
     <style jsx>{`
       section {
         display: flex;
@@ -17,3 +18,11 @@ export default ({ name }) => (
     `}</style>
   </section>
 );
+
+SpecialResult.getInitialProps = async () => {
+  return {
+    namespacesRequired: ["result"]
+  };
+};
+
+export default withNamespaces("result")(SpecialResult);

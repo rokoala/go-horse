@@ -1,14 +1,15 @@
 import React from "react";
 import Link from "next/link";
+import { i18n, withNamespaces } from "../i18n";
 
-export default () => (
+const failureResult = ({ t }) => (
   <section>
-    <h1>EXAM FAIL</h1>
-    <p>Remember XGH... Think about no thinking</p>
+    <h1>{t("exam-fail")}</h1>
+    <p>{t("advise")}</p>
     <img width="200" src="/static/think-about.gif" />
     <p>
       <Link href="/exam">
-        <button>Try again</button>
+        <button>{t("try-again")}</button>
       </Link>
     </p>
     <style jsx>{`
@@ -20,3 +21,11 @@ export default () => (
     `}</style>
   </section>
 );
+
+failureResult.getInitialProps = async () => {
+  return {
+    namespacesRequired: ["result"]
+  };
+};
+
+export default withNamespaces("result")(failureResult);
