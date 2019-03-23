@@ -6,7 +6,7 @@ const SpecialResult = ({ t, name }) => (
     <h1>{t("congratulations")}</h1>
     <h2>{name}</h2>
     <h2>{t("your-score")}</h2>
-    <p>IS OVER 9000%</p>
+    <p className="over-9000">IS OVER 9000%</p>
     <img width="200" src="/static/genius-meme.jpg" />
     <button>{t("print-certificate")}</button>
     <style jsx>{`
@@ -14,6 +14,9 @@ const SpecialResult = ({ t, name }) => (
         display: flex;
         flex-direction: column;
         align-items: center;
+      }
+      .over-9000 {
+        font-size: 3rem;
       }
     `}</style>
   </section>

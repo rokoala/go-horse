@@ -1,0 +1,8 @@
+{
+  "question0": "If you found a bug in your code. What do you do?",
+  "item00": "Create an issue",
+  "item01": "Try to fix immediately",
+  "item02": "If nobody else notice then pretend nothing happened",
+  "item03": "Create the issue, write the bug fix and submit the merge request",
+  "question1": "Which one is the best option for development?"
+}

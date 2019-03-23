@@ -2,6 +2,7 @@ import React from "react";
 import { Head, Timer } from "../components";
 import Link from "next/link";
 import { withRouter } from "next/router";
+import { withNamespaces } from "../i18n";
 
 const QUESTION_ACTION = {
   BACK: -1,
@@ -12,30 +13,27 @@ class Exam extends React.PureComponent {
   state = {
     questions: [
       {
-        title:
-          "If you found a bug in your code but nobody else notice. What do you do?",
-        items: [
-          "Create an issue",
-          "Try to fix immediately",
-          "If nobody else notice then pretend nothing happened"
-        ],
+        title: "question0",
+        items: ["item00", "item01", "item02", "item03"],
         answer: 2,
         selection: ""
       },
       {
-        title: "Which one is the best option for development?",
+        title: "question1",
         items: [
           "Scrum",
           "XP",
           "PMBOK",
           "COBIT",
-          "XGH",
           "REACT",
           "ANGULARJS",
           "LARAVEL",
           "ANALYTICS",
+          "GROSELHA",
+          "XGH",
           "CATOPTROMANCY",
           "DEIPNOSOPHIST",
+          "TAPIOCA",
           "CHARMANDER",
           "SPAGHETTIFICATION"
         ],
@@ -43,8 +41,14 @@ class Exam extends React.PureComponent {
         selection: ""
       },
       {
-        title: "Teste",
-        items: ["yes", "no", "maybe"],
+        title: "GOHORSEは最高ですか。",
+        items: ["SI 🐴", "لا", "может быть"],
+        answer: 0,
+        selection: ""
+      },
+      {
+        title: "Refactoring?",
+        items: ["YES", "yes", "No", "Y", "only on mondays"],
         answer: 2,
         selection: ""
       }
@@ -90,7 +94,7 @@ class Exam extends React.PureComponent {
     });
   };
   render() {
-    const { router } = this.props;
+    const { router, t } = this.props;
     const { questions, questionIndex } = this.state;
 
     if (!router.query.name) {
@@ -103,21 +107,22 @@ class Exam extends React.PureComponent {
           <h2>Time Left</h2>
           <Timer onTimeOver={this.handleTimeOver} />
           <h2>Question #{questionIndex}</h2>
-          <p>
-            <b>{questions[questionIndex].title}</b>
-          </p>
-          <div>
+          <div className="question">
+            <b>{t(questions[questionIndex].title)}</b>
+          </div>
+          <div className="items">
             {questions[questionIndex].items.map((item, index) => (
               <React.Fragment key={`${index}`}>
-                <input
-                  type="radio"
-                  checked={questions[questionIndex].selection === item}
-                  value={`${item}`}
-                  id={`${index}`}
-                  onChange={this.handleRadio}
-                />
-                <label htmlFor={`${index}`}>{item}</label>
-                <br />
+                <div className="input-wrapper">
+                  <input
+                    type="radio"
+                    checked={questions[questionIndex].selection === item}
+                    value={`${item}`}
+                    id={`${index}`}
+                    onChange={this.handleRadio}
+                  />
+                  <label htmlFor={`${index}`}>{t(item)}</label>
+                </div>
               </React.Fragment>
             ))}
           </div>
@@ -166,6 +171,15 @@ class Exam extends React.PureComponent {
               .just-finish {
                 margin-top: auto;
               }
+              .question {
+                margin: 15px;
+              }
+              .items {
+                margin: 10px;
+              }
+              .input-wrapper {
+                margin: 15px 0px;
+              }
             `}
           </style>
         </section>
@@ -174,4 +188,4 @@ class Exam extends React.PureComponent {
   }
 }
 
-export default withRouter(Exam);
+export default withNamespaces("exam")(withRouter(Exam));

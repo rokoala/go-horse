@@ -1,13 +1,13 @@
 import React from "react";
 import { Head, Donate } from "../components";
-import { withNamespace } from "../i18n";
+import { withNamespaces } from "../i18n";
 
 const SecretResult = ({ t }) => (
   <React.Fragment>
     <Head title="XGH Certification" />
     <section>
       <h1>{t("congratulations")}</h1>
-      <h2>{t("secret-result")}</h2>
+      <h2 className="secret-result">{t("secret-result")}</h2>
       <h3>{t("no-score")}</h3>
       <img width="200" src="/static/hackerman.jpg" />
       <button>{t("print-certificate")}</button>
@@ -19,7 +19,11 @@ const SecretResult = ({ t }) => (
       section {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+      }
+      .secret-result {
+        text-align: center;
       }
       .donate {
         margin-top: 50px;
@@ -32,10 +36,10 @@ const SecretResult = ({ t }) => (
   </React.Fragment>
 );
 
-failureResult.SecretResult = async () => {
+SecretResult.getInitialProps = async () => {
   return {
     namespacesRequired: ["result"]
   };
 };
 
-export default withNamespace("result")(SecretResult);
+export default withNamespaces("result")(SecretResult);

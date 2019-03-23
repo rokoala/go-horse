@@ -1,5 +1,6 @@
 import React from "react";
 import { withNamespaces } from "../i18n";
+import { withRouter } from "next/router";
 
 const getFormattedDate = () => {
   const todayTime = new Date();
@@ -9,20 +10,20 @@ const getFormattedDate = () => {
   return day + "/" + month + "/" + year;
 };
 
-const Certificate = ({ t, name }) => (
+const Certificate = ({ t, router }) => (
   <div className="certificate">
+    <div className="cursive">{t("this-certify")}</div>
+    <h2>{router.query.name}</h2>
+    <div className="cursive">{t("has-achieved")}</div>
+    <div className="go-horse-title">eXtreme GoHorse Process Certificate</div>
     <img width="200" src="/static/logo.png" />
-    <h1>{t("this-certify")}</h1>
-    <h2>{name}</h2>
-    <h1>{t("has-achieved")}</h1>
-    <h1>eXtreme GoHorse Process Certificate</h1>
     <p>{t("effective-from")}</p>
-    <p>{getFormattedDate()}</p>
+    <div>{getFormattedDate()}</div>
     <p>{t("candidate-number")}</p>
-    <p>123456789</p>
+    <div>123456789</div>
     <p>{t("certificate-number")}</p>
-    <p>123456789</p>
-    <p>goHorse</p>
+    <div>123456789</div>
+    {/* <p className="signature">XGH</p> */}
     <style jsx>
       {`
         @import url("https://fonts.googleapis.com/css?family=Tangerine");
@@ -33,8 +34,8 @@ const Certificate = ({ t, name }) => (
         }
         .certificate {
           border: 1px solid gray;
-          width: 595px;
-          height: 842px;
+          width: 600px;
+          height: 850px;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -44,6 +45,25 @@ const Certificate = ({ t, name }) => (
         }
         h1 {
           font-family: "Tangerine", cursive;
+        }
+        .signature {
+          font-family: "Tangerine", cursive;
+          font-size: 45px;
+          color: goldenrod;
+          text-shadow: 1px 1px 3px lightslategrey;
+          margin-top: 15px;
+          margin-left: -25px;
+        }
+        .cursive {
+          font-family: "Tangerine", cursive;
+          font-size: 3rem;
+        }
+        .go-horse-title {
+          font-family: "Tangerine", cursive;
+          color: #d8a31d;
+          font-size: 3rem;
+          text-shadow: 1px 1px 1px #4a4141;
+          margin: 20px 0;
         }
       `}
     </style>
@@ -56,4 +76,4 @@ Certificate.getInitialProps = async () => {
   };
 };
 
-export default withNamespaces("certificate")(Certificate);
+export default withNamespaces("certificate")(withRouter(Certificate));

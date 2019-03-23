@@ -1,7 +1,7 @@
 import { Head, Axiom } from "../components";
 import Router from "next/router";
 import Link from "next/link";
-import { i18n, withNamespaces } from "../i18n";
+import { withNamespaces } from "../i18n";
 
 class Index extends React.PureComponent {
   static async getInitialProps() {
@@ -48,7 +48,7 @@ class Index extends React.PureComponent {
         </section>
         <section className="axioms">
           <h3>{t("what-xgh")}</h3>
-          <img src="/static/axioms.gif" />
+          <img className="axioms-img" src="/static/axioms.gif" />
           <Axiom />
         </section>
         <section className="speed-container">
@@ -77,9 +77,6 @@ class Index extends React.PureComponent {
         </section>
         <section>
           <h3>{t("certified-users")}</h3>
-        </section>
-        <section>
-          <h3>{t("certified-companies")}</h3>
         </section>
         <footer>
           <Link href="/termsofservice">
@@ -122,6 +119,10 @@ class Index extends React.PureComponent {
               justify-content: center;
               align-items: center;
               margin: 35px 0;
+            }
+            .axioms-img {
+              width: 80%;
+              max-width: 400px;
             }
             .xgh-horse {
               color: white;
