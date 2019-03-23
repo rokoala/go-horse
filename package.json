@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "node server.js",
     "start": "next start",
     "build": "next build",
     "now-build": "next build",
@@ -22,7 +22,9 @@
   },
   "homepage": "https://github.com/rokoga/go-horse#readme",
   "dependencies": {
+    "express": "^4.16.4",
     "next": "^8.0.3",
+    "next-i18next": "^0.36.4",
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
   }

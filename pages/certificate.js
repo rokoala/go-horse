@@ -1,4 +1,5 @@
 import React from "react";
+import { withNamespaces } from "../i18n";
 
 const getFormattedDate = () => {
   const todayTime = new Date();
@@ -8,18 +9,18 @@ const getFormattedDate = () => {
   return day + "/" + month + "/" + year;
 };
 
-export default ({ name }) => (
+const Certificate = ({ t, name }) => (
   <div className="certificate">
     <img width="200" src="/static/logo.png" />
-    <h1>This is to certify that</h1>
+    <h1>{t("this-certify")}</h1>
     <h2>{name}</h2>
-    <h1>Has achieved the</h1>
+    <h1>{t("has-achieved")}</h1>
     <h1>eXtreme GoHorse Process Certificate</h1>
-    <p>Effective from</p>
+    <p>{t("effective-from")}</p>
     <p>{getFormattedDate()}</p>
-    <p>Candidate Number</p>
+    <p>{t("candidate-number")}</p>
     <p>123456789</p>
-    <p>Certificate Number</p>
+    <p>{t("certificate-number")}</p>
     <p>123456789</p>
     <p>goHorse</p>
     <style jsx>
@@ -48,3 +49,11 @@ export default ({ name }) => (
     </style>
   </div>
 );
+
+Certificate.getInitialProps = async () => {
+  return {
+    namespacesRequired: ["certificate"]
+  };
+};
+
+export default withNamespaces("certificate")(Certificate);
