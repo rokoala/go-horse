@@ -1,9 +1,12 @@
 import { Head, Axiom } from "../components";
 import Router from "next/router";
 import Link from "next/link";
-import { withNamespaces } from "../i18n";
+import { i18n, withNamespaces } from "../i18n";
 
 class Index extends React.PureComponent {
+  state = {
+    language: i18n.language
+  };
   static async getInitialProps() {
     return {
       namespacesRequired: ["index"]
@@ -19,12 +22,23 @@ class Index extends React.PureComponent {
       Router.push({ pathname: "/exam", query: { name } }, "/exam");
     }
   };
+  handleLanguage = evt => {
+    i18n.changeLanguage(event.target.value);
+    this.setState({ language: event.target.value });
+  };
   render() {
     const { t } = this.props;
 
     return (
       <div className="content">
         <Head title="XGH Certification" />
+        <div className="language">
+          <select value={this.state.language} onChange={this.handleLanguage}>
+            <option value="en">English</option>
+            <option value="pt">Português</option>
+          </select>
+          <span>{t("language")}</span>
+        </div>
         <table className="full-w">
           <tbody>
             <tr>
@@ -92,6 +106,15 @@ class Index extends React.PureComponent {
               display: flex;
               flex-direction: column;
               justify-content: center;
+              align-items: center;
+            }
+            .language {
+              margin-left: auto;
+              margin-top: 20px;
+              margin-bottom: 15px;
+              margin-right: 20px;
+              display: flex;
+              flex-direction: column;
               align-items: center;
             }
             table {
