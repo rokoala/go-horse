@@ -1,8 +1,19 @@
 {
+  "question": "Question",
+  "back": "Back",
+  "next": "Next",
+  "finish": "Finish",
+  "just-finish": "Just Finish It",
   "question0": "If you found a bug in your code. What do you do?",
   "item00": "Create an issue",
   "item01": "Try to fix immediately",
   "item02": "If nobody else notice then pretend nothing happened",
   "item03": "Create the issue, write the bug fix and submit the merge request",
-  "question1": "Which one is the best option for development?"
+  "question1": "Which one is the best option for development?",
+  "question2": "According to the good practices of the XGH, when is a good time to perform code tests?",
+  "item20": "TDD is the best option",
+  "item21": "BDD is the best option",
+  "item22": "Test after writing the code",
+  "item23": "Test if time is available",
+  "item24": "Teste is for pussy, if you are a good developer you don't make mistakes."
 }

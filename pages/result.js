@@ -11,7 +11,7 @@ import {
 export default withRouter(({ router }) => {
   let userResult;
 
-  if (router.query.failure || router.query.result < 2) {
+  if (router.query.failure || router.query.result < 3) {
     userResult = <FailureResult />;
   } else if (router.query.name && router.query.finish) {
     userResult = <SpecialResult name={router.query.name} />;

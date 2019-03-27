@@ -45,6 +45,12 @@ class Exam extends React.PureComponent {
         selection: ""
       },
       {
+        title: "question2",
+        items: ["item20", "item21", "item22", "item23", "item24"],
+        answer: 4,
+        selection: ""
+      },
+      {
         title: "GOHORSEは最高ですか。",
         items: ["SI 🐴", "لا", "может быть"],
         answer: 0,
@@ -52,7 +58,7 @@ class Exam extends React.PureComponent {
       },
       {
         title: "Refactoring?",
-        items: ["YES", "yes", "No", "Y", "only on mondays"],
+        items: ["YES", "yes", "No", "Y", "Only on mondays"],
         answer: 2,
         selection: ""
       }
@@ -110,7 +116,9 @@ class Exam extends React.PureComponent {
           <Head title="XGH Certification" />
           <h2>Time Left</h2>
           <Timer onTimeOver={this.handleTimeOver} />
-          <h2>Question #{questionIndex}</h2>
+          <h2>
+            {t("question")} #{questionIndex + 1}
+          </h2>
           <div className="question">
             <b>{t(questions[questionIndex].title)}</b>
           </div>
@@ -133,18 +141,20 @@ class Exam extends React.PureComponent {
           <div className="buttons">
             {questionIndex > 0 && (
               <button onClick={this.handleClickQuestion(QUESTION_ACTION.BACK)}>
-                Back
+                {t("back")}
               </button>
             )}
             {questionIndex === questions.length - 1
               ? questions[questionIndex].selection !== "" && (
-                  <button onClick={this.handleClickFinish}>Finish</button>
+                  <button onClick={this.handleClickFinish}>
+                    {t("finish")}
+                  </button>
                 )
               : questions[questionIndex].selection !== "" && (
                   <button
                     onClick={this.handleClickQuestion(QUESTION_ACTION.NEXT)}
                   >
-                    Next
+                    {t("next")}
                   </button>
                 )}
           </div>
@@ -158,7 +168,7 @@ class Exam extends React.PureComponent {
                 }}
                 as="/result"
               >
-                <button>Just Finish It</button>
+                <button>{t("just-finish")}</button>
               </Link>
             )}
           </p>
