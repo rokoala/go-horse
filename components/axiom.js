@@ -1,12 +1,11 @@
-import { i18n, withNamespaces } from "../i18n";
+import { withNamespaces } from "../i18n";
 
 const Axioms = ({ t }) => (
   <ol>
     {Array.apply(null, Array(24)).map((axiom, index) => (
       <li key={index}>
         <b>{t("title" + (index + 1))}</b>
-        <br />
-        {t("description" + (index + 1))}
+        <p>{t("description" + (index + 1))}</p>
       </li>
     ))}
     <style>

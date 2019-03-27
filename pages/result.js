@@ -26,18 +26,32 @@ export default withRouter(({ router }) => {
   return (
     <React.Fragment>
       <Head title="XGH Certification" />
+      <header>
+        <h1>
+          <a href="/">eXtreme GoHorse Certification</a>
+        </h1>
+      </header>
       {userResult}
       <div className="donate">
         <Donate />
       </div>
       <style jsx>
         {`
+          header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+          }
           .donate {
-            margin-top: 50px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            margin-top: 50px;
+            padding: 25px;
+            background-color: white;
+            border: 1px solid rgba(0, 0, 0, 0.09);
           }
         `}
       </style>

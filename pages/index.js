@@ -67,7 +67,9 @@ class Index extends React.PureComponent {
         </section>
         <section className="speed-container">
           <h3 align="center">{t("speed-comparison")}</h3>
-          <p className="sm-margin">{t("how-speed-comparison")}</p>
+          <p align="center" className="sm-margin">
+            {t("how-speed-comparison")}
+          </p>
           <div className="speed-comparison">
             <div className="finish">FINISH</div>
             <div className="running-track">
@@ -89,9 +91,9 @@ class Index extends React.PureComponent {
             </div>
           </div>
         </section>
-        <section>
+        {/* <section>
           <h3>{t("certified-users")}</h3>
-        </section>
+        </section> */}
         <footer>
           <Link href="/termsofservice">
             <a>{t("terms-of-service")}</a>

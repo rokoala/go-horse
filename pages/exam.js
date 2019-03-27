@@ -21,23 +21,27 @@ class Exam extends React.PureComponent {
       {
         title: "question1",
         items: [
-          "Scrum",
-          "XP",
           "PMBOK",
-          "COBIT",
+          "SCRUM",
+          "XP",
           "REACT",
+          "COBIT",
           "ANGULARJS",
           "LARAVEL",
           "ANALYTICS",
           "GROSELHA",
+          "BIG DATA",
           "XGH",
+          "ARTIFICIAL NEURAL NETWORKS",
           "CATOPTROMANCY",
           "DEIPNOSOPHIST",
+          "UNICORN",
           "TAPIOCA",
           "CHARMANDER",
-          "SPAGHETTIFICATION"
+          "SPAGHETTIFICATION",
+          "WIDDERSHINS"
         ],
-        answer: 4,
+        answer: 10,
         selection: ""
       },
       {
@@ -126,7 +130,7 @@ class Exam extends React.PureComponent {
               </React.Fragment>
             ))}
           </div>
-          <p>
+          <div className="buttons">
             {questionIndex > 0 && (
               <button onClick={this.handleClickQuestion(QUESTION_ACTION.BACK)}>
                 Back
@@ -143,7 +147,7 @@ class Exam extends React.PureComponent {
                     Next
                   </button>
                 )}
-          </p>
+          </div>
 
           <p className="just-finish">
             {questionIndex === 0 && questions[questionIndex].selection === "" && (
@@ -164,6 +168,7 @@ class Exam extends React.PureComponent {
               section {
                 display: flex;
                 height: 100vh;
+                margin: 20px;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
@@ -179,6 +184,9 @@ class Exam extends React.PureComponent {
               }
               .input-wrapper {
                 margin: 15px 0px;
+              }
+              .buttons {
+                margin-bottom: 50px;
               }
             `}
           </style>

@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { i18n, withNamespaces } from "../i18n";
+import { withNamespaces } from "../i18n";
 
 const failureResult = ({ t }) => (
   <section>

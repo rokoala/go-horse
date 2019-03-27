@@ -27,6 +27,9 @@
     "next": "^8.0.3",
     "next-i18next": "^0.36.4",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react-copy-to-clipboard": "^5.0.1",
+    "react-dom": "^16.8.4",
+    "react-share": "^2.4.0",
+    "simple-crypto-js": "^2.0.2"
   }
 }
