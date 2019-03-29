@@ -13,7 +13,7 @@
   "question2": "According to the good practices of the XGH, when is a good time to perform code tests?",
   "item20": "TDD is the best option",
   "item21": "BDD is the best option",
-  "item22": "Test after writing the code",
-  "item23": "Test if time is available",
-  "item24": "Teste is for pussy, if you are a good developer you don't make mistakes."
+  "item22": "Tests after writing the code",
+  "item23": "Only if there is time is available",
+  "item24": "Tests are for the weak, if you are a good developer you don't make mistakes."
 }
