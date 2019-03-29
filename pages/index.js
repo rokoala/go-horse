@@ -98,9 +98,7 @@ class Index extends React.PureComponent {
           <Link href="/termsofservice">
             <a>{t("terms-of-service")}</a>
           </Link>
-          <Link href="/termsofservice">
-            <a>{t("contact-us")}</a>
-          </Link>
+          <a href="mailto:xghcertification@gmail.com">{t("contact-us")}</a>
         </footer>
         <style jsx>
           {`

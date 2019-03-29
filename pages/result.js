@@ -44,6 +44,9 @@ export default withRouter(({ router }) => {
             text-align: center;
           }
           .donate {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;

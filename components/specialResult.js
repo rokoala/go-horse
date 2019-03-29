@@ -31,6 +31,7 @@ const SpecialResult = ({ t, name }) => (
         padding: 15px;
       }
       .name {
+        text-align: center;
         font-size: 2.5rem;
       }
       .print {
