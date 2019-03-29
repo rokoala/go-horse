@@ -15,7 +15,7 @@ import {
   EmailShareButton
 } from "react-share";
 
-const API_URL = "http://192.168.1.18:3000";
+const API_URL = "http://xgohorse.com/";
 
 class Certificate extends React.PureComponent {
   state = {
@@ -77,7 +77,7 @@ class Certificate extends React.PureComponent {
             <h3>{t("share")}</h3>
             <div className="share-buttons">
               <a
-                href={`https://wa.me/?text=Olha+ae+meu+certificado+eXtremeGoHorse%0D%0Ahttp%3A%2F%2F192.168.1.18%3A3000%2Fcertificate%3Fuser%3D${
+                href={`https://wa.me/?text=Olha+ae+meu+certificado+eXtremeGoHorse%0D%0Ahttp%3A%2F%2Fxgohorse.com%2Fcertificate%3Fuser%3D${
                   this.state.userkey
                 }`}
                 className="whatsapp"
