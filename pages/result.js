@@ -24,7 +24,7 @@ export default withRouter(({ router }) => {
   }
 
   return (
-    <React.Fragment>
+    <div className="content">
       <Head title="XGH Certification" />
       <header>
         <h1>
@@ -43,21 +43,26 @@ export default withRouter(({ router }) => {
             justify-content: center;
             text-align: center;
           }
+          .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+          }
           .donate {
-            position: absolute;
-            bottom: 0;
             width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            margin-top: 50px;
+            margin-top: auto;
             padding: 25px;
             background-color: white;
             border: 1px solid rgba(0, 0, 0, 0.09);
           }
         `}
       </style>
-    </React.Fragment>
+    </div>
   );
 });

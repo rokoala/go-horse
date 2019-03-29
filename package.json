@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node server.js",
-    "start": "NODE_ENV=production node server.js",
+    "dev": "next",
+    "start": "next start",
     "build": "next build",
     "now-build": "next build",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,14 +22,13 @@
   },
   "homepage": "https://github.com/rokoga/go-horse#readme",
   "dependencies": {
-    "express": "^4.16.4",
     "i18next": "^15.0.8",
     "i18next-browser-languagedetector": "^3.0.1",
     "next": "^8.0.3",
-    "next-i18next": "^0.36.4",
     "react": "^16.8.4",
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.8.4",
+    "react-i18next": "^10.6.0",
     "react-share": "^2.4.0",
     "simple-crypto-js": "^2.0.2"
   }
