@@ -1,6 +1,5 @@
-import React from "react";
+import { withTranslation } from "react-i18next";
 import Link from "next/link";
-import { withNamespaces } from "../i18n";
 import { withRouter } from "next/router";
 import { Head } from "../components";
 import SimpleCrypto from "simple-crypto-js";
@@ -51,7 +50,7 @@ class Certificate extends React.PureComponent {
         <Head title="XGH Certification" />
         <div className="certificate">
           <div className="cursive">{t("this-certify")}</div>
-          <div className="wrong cursive">Bruce Wayne</div>
+          <div className="wrong cursive">Dennis Ritchie</div>
           <h2 className="cursive">{router.query.name}</h2>
           <div className="cursive">{t("has-achieved")}</div>
           <div className="wrong cursive">COBiT Foundation</div>
@@ -273,13 +272,7 @@ class Certificate extends React.PureComponent {
   }
 }
 
-Certificate.getInitialProps = async () => {
-  return {
-    namespacesRequired: ["certificate"]
-  };
-};
-
-export default withNamespaces("certificate")(withRouter(Certificate));
+export default withTranslation("certificate")(withRouter(Certificate));
 
 const simpleCrypto = new SimpleCrypto(
   "lkkgelasaoenglskjsugjlsiekajsthisisforyouthatarelookingforthecodeandhavecheckthatthisisareallymessybutitsintenttobelijk"

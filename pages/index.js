@@ -1,19 +1,20 @@
+import { withTranslation } from "react-i18next";
 import { Head, Axiom } from "../components";
 import Router from "next/router";
 import Link from "next/link";
-import { i18n, withNamespaces } from "../i18n";
 
 class Index extends React.PureComponent {
-  state = {
-    language: i18n.language
-  };
-  static async getInitialProps() {
-    return {
-      namespacesRequired: ["index"]
+  constructor(props) {
+    super(props);
+    const { i18n } = props;
+
+    this.state = {
+      language: i18n.language
     };
   }
   go = () => {
     const { t } = this.props;
+
     const name = prompt(t("enter-name"), "");
     if (name == null || name == "") {
       alert(t("provide-name"));
@@ -22,7 +23,8 @@ class Index extends React.PureComponent {
       Router.push({ pathname: "/exam", query: { name } }, "/exam");
     }
   };
-  handleLanguage = evt => {
+  handleLanguage = () => {
+    const { i18n } = this.props;
     i18n.changeLanguage(event.target.value);
     this.setState({ language: event.target.value });
   };
@@ -43,7 +45,7 @@ class Index extends React.PureComponent {
           <tbody>
             <tr>
               <td>
-                <img className="full-w" src="/static/title2.png" />
+                <img className="full-w" src="/static/title.png" />
               </td>
             </tr>
           </tbody>
@@ -62,7 +64,7 @@ class Index extends React.PureComponent {
         </section>
         <section className="axioms">
           <h3>{t("what-xgh")}</h3>
-          <img className="axioms-img" src="/static/axioms.gif" />
+          <img className="axioms-img" src="/static/images/axioms.gif" />
           <Axiom />
         </section>
         <section className="speed-container">
@@ -91,9 +93,9 @@ class Index extends React.PureComponent {
             </div>
           </div>
         </section>
-        {/* <section>
+        <section>
           <h3>{t("certified-users")}</h3>
-        </section> */}
+        </section>
         <footer>
           <Link href={"/termsofservice-" + this.state.language}>
             <a>{t("terms-of-service")}</a>
@@ -210,4 +212,4 @@ class Index extends React.PureComponent {
   }
 }
 
-export default withNamespaces("index")(Index);
+export default withTranslation("index")(Index);

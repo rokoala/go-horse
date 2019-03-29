@@ -1,8 +1,7 @@
-import React from "react";
+import { withTranslation } from "react-i18next";
 import { Head, Timer } from "../components";
 import Link from "next/link";
 import { withRouter } from "next/router";
-import { withNamespaces } from "../i18n";
 
 const QUESTION_ACTION = {
   BACK: -1,
@@ -206,4 +205,4 @@ class Exam extends React.PureComponent {
   }
 }
 
-export default withNamespaces("exam")(withRouter(Exam));
+export default withTranslation("exam")(withRouter(Exam));
