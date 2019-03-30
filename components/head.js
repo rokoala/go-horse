@@ -162,6 +162,8 @@ export default ({ title }) => (
             opacity: 0;
           }
         }
+
+        @import url("https://fonts.googleapis.com/css?family=Cedarville+Cursive");
       `}
     </style>
   </div>
