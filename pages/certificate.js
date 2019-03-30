@@ -14,7 +14,7 @@ import {
   EmailShareButton
 } from "react-share";
 
-const API_URL = "http://xgohorse.com/";
+const API_URL = "http://xgohorse.com";
 
 class Certificate extends React.PureComponent {
   state = {
@@ -203,7 +203,6 @@ class Certificate extends React.PureComponent {
 
         <style jsx>
           {`
-            @import url("https://fonts.googleapis.com/css?family=Cedarville+Cursive");
             img {
               background-color: white;
               border-style: outset;
