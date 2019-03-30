@@ -45,7 +45,7 @@ class Index extends React.PureComponent {
           <tbody>
             <tr>
               <td>
-                <img className="full-w" src="/static/title.png" />
+                <img className="full-w" src="/static/images/title.png" />
               </td>
             </tr>
           </tbody>

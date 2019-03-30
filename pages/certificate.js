@@ -188,7 +188,9 @@ class Certificate extends React.PureComponent {
               </CopyToClipboard>
             </p>
             <div style={{ marginBottom: 25 }}>
-              <button>{t("back")}</button>
+              <Link href="/">
+                <button>{t("back")}</button>
+              </Link>
             </div>
           </section>
         ) : (
