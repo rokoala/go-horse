@@ -28,7 +28,6 @@ class Index extends React.PureComponent {
   };
   handleLanguage = () => {
     const { i18n } = this.props;
-    console.log("handle");
     i18n.changeLanguage(event.target.value);
     this.setState({ language: event.target.value });
   };
@@ -39,7 +38,6 @@ class Index extends React.PureComponent {
       <div className="content">
         <Head title="XGH Certification" />
         <div className="language">
-          {console.log(this.state.language)}
           <select value={this.state.language} onChange={this.handleLanguage}>
             <option value="en">English</option>
             <option value="pt">Português</option>
