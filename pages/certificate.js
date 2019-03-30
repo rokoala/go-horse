@@ -203,11 +203,6 @@ class Certificate extends React.PureComponent {
 
         <style jsx>
           {`
-            @media (max-width: 420px) {
-              html {
-                font-size: 8px;
-              }
-            }
             img {
               background-color: white;
               border-style: outset;
@@ -256,12 +251,12 @@ class Certificate extends React.PureComponent {
             }
             .cursive {
               font-family: "Cedarville Cursive", cursive;
-              font-size: 3rem;
+              font-size: 2rem;
             }
             .go-horse-title {
               font-family: "Cedarville Cursive", cursive;
               color: red;
-              font-size: 3rem;
+              font-size: 2rem;
               text-shadow: 1px 1px 1px #4a4141;
               margin-bottom: 20px;
             }
