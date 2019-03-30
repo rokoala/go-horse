@@ -203,6 +203,11 @@ class Certificate extends React.PureComponent {
 
         <style jsx>
           {`
+            @media (max-width: 420px) {
+              html {
+                font-size: 8px;
+              }
+            }
             img {
               background-color: white;
               border-style: outset;
