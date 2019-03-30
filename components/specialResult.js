@@ -26,6 +26,7 @@ export default ({ name }) => {
         }
         .over-9000 {
           margin-top: 0;
+          text-align: center;
           font-size: 3rem;
           background-color: blue;
           color: #fdcc08;
