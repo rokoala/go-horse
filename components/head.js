@@ -81,6 +81,10 @@ export default ({ title }) => (
         name="description"
       />
       <meta
+        name="google-site-verification"
+        content="google86fcfc92adc1965b.html"
+      />
+      <meta
         name="msapplication-TileImage"
         content="/static/logo/ms-icon-144x144.png"
       />
