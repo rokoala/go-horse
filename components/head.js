@@ -82,7 +82,7 @@ export default ({ title }) => (
       />
       <meta
         name="google-site-verification"
-        content="google86fcfc92adc1965b.html"
+        content="147-nQUSKLX1iEG5VD9ByUCwyNW4i2JmMUd8OlOcrOY"
       />
       <meta
         name="msapplication-TileImage"
