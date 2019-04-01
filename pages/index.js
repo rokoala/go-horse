@@ -96,9 +96,9 @@ class Index extends React.PureComponent {
             </div>
           </div>
         </section>
-        <section>
-          <h3>{t("certified-users")}</h3>
-        </section>
+        <button className="full-w" onClick={this.go}>
+          🐴 {t("go-certificate")}
+        </button>
         <footer>
           <Link href={"/termsofservice-" + this.state.language}>
             <a>{t("terms-of-service")}</a>
@@ -201,6 +201,7 @@ class Index extends React.PureComponent {
               display: flex;
               flex-direction: column;
               justify-content: center;
+              margin-top: 20px;
               align-items: center;
               border-top: 1px solid gray;
               background-color: white;
