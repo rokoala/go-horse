@@ -77,6 +77,10 @@ export default ({ title }) => (
       <link rel="manifest" href="/static/logo/manifest.json" />
       <meta name="msapplication-TileColor" content="#ffffff" />
       <meta
+        content="eXtreme Go Horse Certication. Agora é possível tirar sua certificação eXtreme Go Horse!"
+        name="description"
+      />
+      <meta
         name="msapplication-TileImage"
         content="/static/logo/ms-icon-144x144.png"
       />
