@@ -18,6 +18,9 @@ const Books = ({ t }) => (
         }
         .books {
           display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
         }
         .book {
           width: 250px;
