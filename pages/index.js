@@ -1,5 +1,6 @@
 import { withTranslation } from "react-i18next";
 import { Head, Axiom } from "../components";
+import ReactGA from "react-ga";
 import Router from "next/router";
 import Link from "next/link";
 
@@ -13,6 +14,8 @@ class Index extends React.PureComponent {
   }
   componentDidMount() {
     const { i18n } = this.props;
+    ReactGA.initialize("UA-137508594-1");
+    ReactGA.pageview(document.location.pathname);
     this.setState({ language: i18n.language });
   }
   go = () => {

@@ -196,7 +196,7 @@ class Certificate extends React.PureComponent {
         ) : (
           <button className="want">
             <Link href="/">
-              <blink>{t("want")}</blink>
+              <div className="blink">{t("want")}</div>
             </Link>
           </button>
         )}
