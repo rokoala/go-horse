@@ -84,6 +84,7 @@ class Certificate extends React.PureComponent {
                 href={`https://wa.me/?text=http%3A%2F%2Fxgohorse.com%2Fcertificate%3Fuser%3D${
                   this.state.userkey
                 }`}
+                target="_blank"
                 className="whatsapp"
               />
               <FacebookShareButton
