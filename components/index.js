@@ -6,3 +6,4 @@ export { default as FailureResult } from "./failureResult";
 export { default as Result } from "./result";
 export { default as Donate } from "./donate";
 export { default as SharePage } from "./sharePage";
+export { default as Books } from "./books";

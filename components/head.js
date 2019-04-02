@@ -1,6 +1,7 @@
 import Head from "next/head";
+import { withTranslation } from "react-i18next";
 
-export default ({ title }) => (
+const CustomHead = ({ title, t }) => (
   <div>
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -76,10 +77,7 @@ export default ({ title }) => (
       <link rel="icon" type="image/png" href="/static/favicon.ico" />
       <link rel="manifest" href="/static/logo/manifest.json" />
       <meta name="msapplication-TileColor" content="#ffffff" />
-      <meta
-        content="eXtreme Go Horse Certication. Agora é possível tirar sua certificação eXtreme Go Horse!"
-        name="description"
-      />
+      <meta content={t("description")} name="description" />
       <meta
         name="google-site-verification"
         content="147-nQUSKLX1iEG5VD9ByUCwyNW4i2JmMUd8OlOcrOY"
@@ -176,3 +174,5 @@ export default ({ title }) => (
     </style>
   </div>
 );
+
+export default withTranslation("head")(CustomHead);

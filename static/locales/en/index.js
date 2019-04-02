@@ -6,3 +6,5 @@ export { default as exam } from "./exam.json";
 export { default as result } from "./result.json";
 export { default as index } from "./index.json";
 export { default as share } from "./share.json";
+export { default as head } from "./head.json";
+export { default as books } from "./books.json";

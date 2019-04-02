@@ -1,5 +1,5 @@
 import { withTranslation } from "react-i18next";
-import { Head, Axiom, SharePage } from "../components";
+import { Head, Axiom, Books, SharePage } from "../components";
 import ReactGA from "react-ga";
 import Router from "next/router";
 import Link from "next/link";
@@ -102,6 +102,9 @@ class Index extends React.PureComponent {
         <button className="full-w" onClick={this.go}>
           🐴 {t("go-certificate")}
         </button>
+        <section>
+          <Books />
+        </section>
         <footer>
           <Link href={"/termsofservice-" + this.state.language}>
             <a>{t("terms-of-service")}</a>
