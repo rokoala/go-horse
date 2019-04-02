@@ -2,6 +2,7 @@ import { withTranslation } from "react-i18next";
 import { Head, Timer } from "../components";
 import Link from "next/link";
 import { withRouter } from "next/router";
+import ReactGA from "react-ga";
 
 const QUESTION_ACTION = {
   BACK: -1,
@@ -64,6 +65,10 @@ class Exam extends React.PureComponent {
     ],
     questionIndex: 0
   };
+  componentDidMount() {
+    ReactGA.initialize("UA-137508594-1");
+    ReactGA.pageview(document.location.pathname);
+  }
   result = () =>
     this.state.questions.reduce((prevVal, question) => {
       return (

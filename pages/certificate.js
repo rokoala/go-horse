@@ -4,6 +4,7 @@ import { withRouter } from "next/router";
 import { Head } from "../components";
 import SimpleCrypto from "simple-crypto-js";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import ReactGA from "react-ga";
 
 import {
   FacebookShareButton,
@@ -31,6 +32,8 @@ class Certificate extends React.PureComponent {
   componentDidMount() {
     const { router } = this.props;
 
+    ReactGA.initialize("UA-137508594-1");
+    ReactGA.pageview(document.location.pathname);
     if (router.query.user) {
       this.setState({ showShareButtons: false });
       router.query.name = simpleCrypto.decrypt(router.query.user);
