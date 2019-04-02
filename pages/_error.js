@@ -8,9 +8,14 @@ export default () => {
     <React.Fragment>
       <Head title="XGH Certification - 404" />
       <div className="content">
-        <h1>{t("Welcome to React")}</h1>
-        <p>{t("explain")}</p>
-        {/* <p>{t("show-gif")}</p> */}
+        <h1>
+          <a href="/">eXtreme GoHorse Process Certification</a>
+        </h1>
+        <h1>{t("404")}</h1>
+        {/* <p>{t("explain")}</p> */}
+        <img src="/static/images/construction.gif" />
+        <p>{t("show-gif")}</p>
+        <img src="/static/images/baby.gif" />
         <style jsx>
           {`
             .content {
