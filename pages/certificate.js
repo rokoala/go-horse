@@ -36,13 +36,15 @@ class Certificate extends React.PureComponent {
     ReactGA.pageview(document.location.pathname);
     if (router.query.user) {
       this.setState({ showShareButtons: false });
-      router.query.name = simpleCrypto.decrypt(router.query.user);
+      router.query.name = simpleCrypto.decrypt(
+        decodeURIComponent(router.query.user)
+      );
     } else {
       const plainText = router.query.name || "";
       simpleCrypto.encrypt(plainText);
       var cipherText = simpleCrypto.encrypt(plainText);
       this.setState({
-        userkey: cipherText
+        userkey: encodeURIComponent(cipherText)
       });
     }
   }
