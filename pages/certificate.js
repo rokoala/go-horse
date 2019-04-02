@@ -79,7 +79,7 @@ class Certificate extends React.PureComponent {
             <h3>{t("share")}</h3>
             <div className="share-buttons">
               <a
-                href={`https://wa.me/?text=Olha+ae+meu+certificado+eXtremeGoHorse%0D%0Ahttp%3A%2F%2Fxgohorse.com%2Fcertificate%3Fuser%3D${
+                href={`https://wa.me/?text=http%3A%2F%2Fxgohorse.com%2Fcertificate%3Fuser%3D${
                   this.state.userkey
                 }`}
                 className="whatsapp"

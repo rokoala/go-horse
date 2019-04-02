@@ -5,3 +5,4 @@ export { default as error } from "./error.json";
 export { default as exam } from "./exam.json";
 export { default as result } from "./result.json";
 export { default as index } from "./index.json";
+export { default as share } from "./share.json";

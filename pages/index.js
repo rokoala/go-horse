@@ -1,5 +1,5 @@
 import { withTranslation } from "react-i18next";
-import { Head, Axiom } from "../components";
+import { Head, Axiom, SharePage } from "../components";
 import ReactGA from "react-ga";
 import Router from "next/router";
 import Link from "next/link";
@@ -107,6 +107,9 @@ class Index extends React.PureComponent {
             <a>{t("terms-of-service")}</a>
           </Link>
           <a href="mailto:xghcertification@gmail.com">{t("contact-us")}</a>
+          <div className="share-buttons">
+            <SharePage />
+          </div>
         </footer>
         <style jsx>
           {`
@@ -199,6 +202,10 @@ class Index extends React.PureComponent {
             }
             .speed-comparison .running-track {
               flex: 1;
+            }
+            .share-buttons {
+              display: flex;
+              margin-top: 15px;
             }
             footer {
               display: flex;
