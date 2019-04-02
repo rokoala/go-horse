@@ -54,7 +54,7 @@ class Certificate extends React.PureComponent {
         <div className="certificate">
           <div className="cursive">{t("this-certify")}</div>
           <div className="wrong cursive">Dennis Ritchie</div>
-          <h2 className="cursive">{router.query.name}</h2>
+          <h2 className="cursive name">{router.query.name}</h2>
           <div className="cursive">{t("has-achieved")}</div>
           <div className="wrong cursive">COBiT Foundation</div>
           <div className="go-horse-title">
@@ -189,6 +189,7 @@ class Certificate extends React.PureComponent {
               >
                 <button>{t("copy")}</button>
               </CopyToClipboard>
+              <button onClick={() => window.print()}>{t("print")}</button>
             </p>
             <div style={{ marginBottom: 25 }}>
               <Link href="/">
@@ -223,7 +224,7 @@ class Certificate extends React.PureComponent {
             }
             .certificate {
               border: 1px solid gray;
-              padding: 40px;
+              padding: 35px;
               display: flex;
               flex-direction: column;
               justify-content: center;
@@ -268,6 +269,30 @@ class Certificate extends React.PureComponent {
               width: 200px;
               height: 100px;
               font-size: 18px;
+            }
+            @media print {
+              .share-content {
+                display: none;
+              }
+              .name {
+                margin: 0px;
+                padding: 5px;
+              }
+              .go-horse-title {
+                margin: 0px;
+              }
+              body {
+                margin: 1cm;
+              }
+            }
+          `}
+        </style>
+        <style jsx global>
+          {`
+            @media print {
+              body::before {
+                content: none;
+              }
             }
           `}
         </style>
