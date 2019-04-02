@@ -99,11 +99,11 @@ class Index extends React.PureComponent {
             </div>
           </div>
         </section>
-        <button className="full-w" onClick={this.go}>
-          🐴 {t("go-certificate")}
-        </button>
-        <section>
+        <section className="books">
           <Books />
+        </section>
+        <section>
+          <button onClick={this.go}>🐴 {t("go-certificate")}</button>
         </section>
         <footer>
           <Link href={"/termsofservice-" + this.state.language}>
@@ -209,6 +209,9 @@ class Index extends React.PureComponent {
             .share-buttons {
               display: flex;
               margin-top: 15px;
+            }
+            section.books {
+              margin: 50px 0;
             }
             footer {
               display: flex;
