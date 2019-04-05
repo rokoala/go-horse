@@ -105,6 +105,16 @@ class Index extends React.PureComponent {
         <section>
           <button onClick={this.go}>🐴 {t("go-certificate")}</button>
         </section>
+        <section>
+          <h2>{t("certified-users")}</h2>
+          <div className="certified-users">
+            <a
+              target="_blank"
+              className="user user-1"
+              href="https://web.facebook.com/andrelgouveia"
+            />
+          </div>
+        </section>
         <footer>
           <Link href={"/termsofservice-" + this.state.language}>
             <a>{t("terms-of-service")}</a>
@@ -212,6 +222,22 @@ class Index extends React.PureComponent {
             }
             section.books {
               margin: 50px 0;
+            }
+            .user {
+              display: block;
+              width: 85px;
+              height: 85px;
+              border-radius: 50%;
+              background-size: cover;
+            }
+            .user-1 {
+              background-image: url("https://scontent.fcgh5-1.fna.fbcdn.net/v/t31.0-8/14324618_10210739180186545_863292494099771014_o.jpg?_nc_cat=102&_nc_eui2=AeHXUmZrjZhY_JGYwJQ8085jTZsS386F6Mmzoe8undIoexIEnA_C6HQwqPvm86T6sjJaueTQ_4RFGy404viI9Gcol6Ob4WnNB51idWM-bHVy7g&_nc_ht=scontent.fcgh5-1.fna&oh=b4b3a7dbe99ef3f5df7c398b6436a631&oe=5D02FCFC");
+            }
+            .certified-users {
+              align-items: center;
+              flex-direction: row;
+              justify-content: center;
+              display: flex;
             }
             footer {
               display: flex;
