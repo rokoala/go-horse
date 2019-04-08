@@ -1,5 +1,5 @@
 import { withTranslation } from "react-i18next";
-import { Head, Axiom, Books, SharePage } from "../components";
+import { Head, Axiom, Donate, Books, SharePage } from "../components";
 import ReactGA from "react-ga";
 import Router from "next/router";
 import Link from "next/link";
@@ -105,13 +105,18 @@ class Index extends React.PureComponent {
         <section>
           <button onClick={this.go}>🐴 {t("go-certificate")}</button>
         </section>
-        <section>
+        <section className="certified">
           <h2>{t("certified-users")}</h2>
           <div className="certified-users">
             <a
               target="_blank"
               className="user user-1"
               href="https://web.facebook.com/andrelgouveia"
+            />
+            <a
+              target="_blank"
+              className="user user-2"
+              href="https://www.instagram.com/mdmansur25/"
             />
           </div>
         </section>
@@ -120,6 +125,7 @@ class Index extends React.PureComponent {
             <a>{t("terms-of-service")}</a>
           </Link>
           <a href="mailto:xghcertification@gmail.com">{t("contact-us")}</a>
+          <Donate />
           <div className="share-buttons">
             <SharePage />
           </div>
@@ -225,6 +231,7 @@ class Index extends React.PureComponent {
             }
             .user {
               display: block;
+              margin: 5px;
               width: 85px;
               height: 85px;
               border-radius: 50%;
@@ -232,6 +239,12 @@ class Index extends React.PureComponent {
             }
             .user-1 {
               background-image: url("https://scontent.fcgh5-1.fna.fbcdn.net/v/t31.0-8/14324618_10210739180186545_863292494099771014_o.jpg?_nc_cat=102&_nc_eui2=AeHXUmZrjZhY_JGYwJQ8085jTZsS386F6Mmzoe8undIoexIEnA_C6HQwqPvm86T6sjJaueTQ_4RFGy404viI9Gcol6Ob4WnNB51idWM-bHVy7g&_nc_ht=scontent.fcgh5-1.fna&oh=b4b3a7dbe99ef3f5df7c398b6436a631&oe=5D02FCFC");
+            }
+            .user-2 {
+              background-image: url("https://instagram.fcgh4-1.fna.fbcdn.net/vp/f12d1102fd7acbd55846ef7bcb6c6817/5D3EA2FB/t51.2885-19/s320x320/43140377_308469339955098_8334936018494947328_n.jpg?_nc_ht=instagram.fcgh4-1.fna.fbcdn.net");
+            }
+            .certified {
+              margin: 25px 0;
             }
             .certified-users {
               align-items: center;
@@ -247,7 +260,6 @@ class Index extends React.PureComponent {
               align-items: center;
               border-top: 1px solid gray;
               background-color: white;
-              height: 200px;
               width: 100%;
               padding: 15px;
             }

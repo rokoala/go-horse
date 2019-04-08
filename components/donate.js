@@ -10,8 +10,14 @@ export default () => {
         method="post"
         target="_top"
       >
-        <input type="hidden" name="cmd" value="_s-xclick" />
-        <input type="hidden" name="hosted_button_id" value="HYUER8GHHDQFS" />
+        <input type="hidden" name="cmd" value="_donations" />
+        <input
+          type="hidden"
+          name="business"
+          value="xghcertification@gmail.com"
+        />
+        <input type="hidden" name="currency_code" value="BRL" />
+        <input type="hidden" name="amount" value="5" />
         <input
           type="image"
           src="https://www.paypalobjects.com/pt_BR/i/btn/btn_donate_LG.gif"
@@ -34,8 +40,14 @@ export default () => {
         method="post"
         target="_top"
       >
-        <input type="hidden" name="cmd" value="_s-xclick" />
-        <input type="hidden" name="hosted_button_id" value="4GY42HG9EVLKL" />
+        <input type="hidden" name="cmd" value="_donations" />
+        <input
+          type="hidden"
+          name="business"
+          value="xghcertification@gmail.com"
+        />
+        <input type="hidden" name="currency_code" value="USD" />
+        <input type="hidden" name="amount" value="5" />
         <input
           type="image"
           src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
@@ -52,6 +64,7 @@ export default () => {
           height="1"
         />
       </form>
+
       <style jsx>{`
         @import url("https://fonts.googleapis.com/css?family=Raleway");
         .help-us {
