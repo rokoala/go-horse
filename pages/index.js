@@ -14,6 +14,7 @@ class Index extends React.PureComponent {
   }
   componentDidMount() {
     const { i18n } = this.props;
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
     ReactGA.initialize("UA-137508594-1");
     ReactGA.pageview(document.location.pathname);
     this.setState({ language: i18n.language });
@@ -40,6 +41,15 @@ class Index extends React.PureComponent {
     return (
       <div className="content">
         <Head title="XGH Certification" />
+        <div className="ad">
+          <ins
+            className="adsbygoogle"
+            style={{ display: "block" }}
+            data-ad-client="ca-pub-1462658131006885"
+            enable_page_level_ads="true"
+            data-ad-format="auto"
+          />
+        </div>
         <div className="language">
           <select value={this.state.language} onChange={this.handleLanguage}>
             <option value="en">English</option>

@@ -4,6 +4,10 @@ import { withTranslation } from "react-i18next";
 const CustomHead = ({ title, t }) => (
   <div>
     <Head>
+      <script
+        async
+        src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link
         rel="apple-touch-icon"
