@@ -23,6 +23,7 @@ class Index extends React.PureComponent {
     this.setState({ language: i18n.language });
   }
   go = () => {
+    // retry
     const { t } = this.props;
 
     const name = prompt(t("enter-name"), "");
