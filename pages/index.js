@@ -33,6 +33,12 @@ class Index extends React.PureComponent {
       Router.push({ pathname: "/exam", query: { name } }, "/exam");
     }
   };
+  buy = () => {
+    window.open(
+      "https://produto.mercadolivre.com.br/MLB-1234798826-caneca-go-horse-certified-professional-_JM",
+      "_blank"
+    );
+  };
   handleLanguage = () => {
     const { i18n } = this.props;
     i18n.changeLanguage(event.target.value);
@@ -61,15 +67,15 @@ class Index extends React.PureComponent {
           </tbody>
         </table>
         <img className="logo" width="250" src="/static/logo.png" />
-        <section className="full-w">
-          <p>
+        <section className="full-w flex-center">
+          <p style={{ width: "100%" }}>
             <marquee className="get-certification">{t("marquee")}</marquee>
           </p>
           <p align="center" className="blink certificate">
             {t("get-now")}
           </p>
-          <button className="full-w" onClick={this.go}>
-            🐴 Go Horse
+          <button className="go-btn" onClick={this.go}>
+            {"🐴 Go Horse Now!!!!"}
           </button>
         </section>
         <section className="axioms">
@@ -109,6 +115,19 @@ class Index extends React.PureComponent {
         <section>
           <button onClick={this.go}>🐴 {t("go-certificate")}</button>
         </section>
+        <section className="buy">
+          <a
+            target="_blank"
+            href="https://produto.mercadolivre.com.br/MLB-1234798826-caneca-go-horse-certified-professional-_JM"
+          >
+            <h2>COMPRE SUA CANECA GO HORSE!!!</h2>
+          </a>
+          <img
+            width="400px"
+            src="https://http2.mlstatic.com/caneca-go-horse-certified-professional-D_NQ_NP_898720-MLB30696159675_052019-F.webp"
+          />
+          <button onClick={this.buy}>Compre!</button>
+        </section>
         <section className="certified">
           <h2>{t("certified-users")}</h2>
           <div className="certified-users">
@@ -141,6 +160,20 @@ class Index extends React.PureComponent {
               flex-direction: column;
               justify-content: center;
               align-items: center;
+            }
+            .buy {
+              display: flex;
+              flex-direction: column;
+              margin: 4rem 0;
+            }
+            .go-btn {
+              width: 200px;
+            }
+            .flex-center {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
             }
             .language {
               margin-left: auto;
