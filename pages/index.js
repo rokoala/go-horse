@@ -276,7 +276,7 @@ class Index extends React.PureComponent {
               background-size: cover;
             }
             .user-1 {
-              background-image: url("https://scontent.fcgh5-1.fna.fbcdn.net/v/t31.0-8/14324618_10210739180186545_863292494099771014_o.jpg?_nc_cat=102&_nc_eui2=AeHXUmZrjZhY_JGYwJQ8085jTZsS386F6Mmzoe8undIoexIEnA_C6HQwqPvm86T6sjJaueTQ_4RFGy404viI9Gcol6Ob4WnNB51idWM-bHVy7g&_nc_ht=scontent.fcgh5-1.fna&oh=b4b3a7dbe99ef3f5df7c398b6436a631&oe=5D02FCFC");
+              background-image: url("https://scontent.fcgh20-1.fna.fbcdn.net/v/t31.0-8/14324618_10210739180186545_863292494099771014_o.jpg?_nc_cat=102&_nc_oc=AQkIL6ZQ3eqePHmq7sdUL3apwt1ABrKygolI9EJV0Ed8n3Wik8PqCIPG6DEyRLd8PLyQOQCEGcKa96z1VQFmhyn6&_nc_ht=scontent.fcgh20-1.fna&oh=f00a4ce36f8491f0c9c9797ff4780f67&oe=5D79A3FC");
             }
             .user-2 {
               background-image: url("https://instagram.fcgh4-1.fna.fbcdn.net/vp/f12d1102fd7acbd55846ef7bcb6c6817/5D3EA2FB/t51.2885-19/s320x320/43140377_308469339955098_8334936018494947328_n.jpg?_nc_ht=instagram.fcgh4-1.fna.fbcdn.net");
