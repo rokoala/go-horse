@@ -12,7 +12,11 @@ const CustomHead = ({ title, t }) => (
       <meta property="og:site_name" content="xGoHorse Certification" />
       <meta property="og:title" content="xGoHorse Certification" />
       <meta property="og:description" content="xGoHorse Certification" />
-      <meta property="og:image" itemprop="image" content="/static/logo.png" />
+      <meta
+        property="og:image"
+        itemprop="image"
+        content="https://xgohorse.com/static/logo.png"
+      />
       <meta property="og:type" content="website" />
       <link
         rel="apple-touch-icon"
