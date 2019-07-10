@@ -36,7 +36,7 @@ class Index extends React.PureComponent {
   };
   buy = () => {
     window.open(
-      "https://produto.mercadolivre.com.br/MLB-1234798826-caneca-go-horse-certified-professional-_JM",
+      "https://produto.mercadolivre.com.br/MLB-1270404740-caneca-go-horse-certified-professional-_JM",
       "_blank"
     );
   };
@@ -119,7 +119,7 @@ class Index extends React.PureComponent {
         <section className="buy">
           <a
             target="_blank"
-            href="https://produto.mercadolivre.com.br/MLB-1234798826-caneca-go-horse-certified-professional-_JM"
+            href="https://produto.mercadolivre.com.br/MLB-1270404740-caneca-go-horse-certified-professional-_JM"
           >
             <h2>COMPRE SUA CANECA GO HORSE!!!</h2>
           </a>
