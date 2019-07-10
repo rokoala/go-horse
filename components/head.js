@@ -9,6 +9,11 @@ const CustomHead = ({ title, t }) => (
         src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
       />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta property="og:site_name" content="xGoHorse Certification" />
+      <meta property="og:title" content="xGoHorse Certification" />
+      <meta property="og:description" content="xGoHorse Certification" />
+      <meta property="og:image" itemprop="image" content="/static/logo.png" />
+      <meta property="og:type" content="website" />
       <link
         rel="apple-touch-icon"
         sizes="57x57"
