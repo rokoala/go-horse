@@ -4,23 +4,27 @@ export default () => {
   const { t } = useTranslation("axioms");
 
   return (
-    <ol>
+    <ul className="axioms">
       {Array.apply(null, Array(24)).map((axiom, index) => (
         <li key={index}>
-          <b>{t("title" + (index + 1))}</b>
+          <h3>{t("title" + (index + 1))}</h3>
           <p>{t("description" + (index + 1))}</p>
         </li>
       ))}
-      <style>
+      <style jsx>
         {`
-        ol{
-            margin:50px;
-        }
-        li{
-            margin: 20px 0px;
-        }
-    `}
+          ul.axioms {
+            list-style: none;
+          }
+          li {
+            margin: 50px 0px;
+            line-height: 1.8;
+          }
+          li:first-child {
+            margin: 0px;
+          }
+        `}
       </style>
-    </ol>
+    </ul>
   );
 };

@@ -104,85 +104,61 @@ const CustomHead = ({ title, t }) => (
     </Head>
     <style jsx global>
       {`
+        @import url("https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap");
+
         * {
           box-sizing: border-box;
+          text-rendering: optimizeLegibility !important;
         }
-        body::before {
-          width: 100%;
-          height: 100%;
-          display: block;
-          position: fixed;
-          left: 0;
-          top: 0;
-          z-index: -1;
-          content: " ";
-          background: url(/static/logo.png) repeat;
-          background-size: 200px;
-          opacity: 0.1;
+        html {
+          scroll-behavior: smooth;
         }
         body {
+          font-family: "Quicksand", sans-serif;
           margin: 0;
-          animation: animate 0.25s infinite;
-        }
-        button,
-        input,
-        label {
-          cursor: inherit;
-        }
-        @keyframes animate {
-          0% {
-            cursor: url("/static/cursor/1.png"), auto;
-          }
-          20% {
-            cursor: url("/static/cursor/2.png"), auto;
-          }
-          40% {
-            cursor: url("/static/cursor/3.png"), auto;
-          }
-          60% {
-            cursor: url("/static/cursor/4.png"), auto;
-          }
-          80% {
-            cursor: url("/static/cursor/5.png"), auto;
-          }
-          100% {
-            cursor: url("/static/cursor/6.png"), auto;
-          }
+          padding-top: 70px;
         }
 
-        blink,
-        .blink {
-          -webkit-animation: blink 1s step-end infinite;
-          -moz-animation: blink 1s step-end infinite;
-          -o-animation: blink 1s step-end infinite;
-          animation: blink 1s step-end infinite;
+        @font-face {
+          font-family: NexaRust;
+          src: url("/static/fonts/NexaRust.otf");
+        }
+        @font-face {
+          font-family: Weston;
+          src: url("/static/fonts/WestonFree-Regular.otf");
+        }
+        @font-face {
+          font-family: Weston;
+          font-weight: 100;
+          src: url("/static/fonts/WestonFree-Light.otf");
         }
 
-        @-webkit-keyframes blink {
-          67% {
-            opacity: 0;
-          }
+        section {
+          display: flex;
+          margin: 40px;
+          flex-direction: column;
+          flex-align: center;
+          align-items: center;
+          font-size: 1rem;
+          background-color: white;
+          color: black;
         }
-
-        @-moz-keyframes blink {
-          67% {
-            opacity: 0;
-          }
+        .section-title {
+          margin: 40px 0;
+          font-size: 2rem;
+          text-transform: uppercase;
+          font-family: Weston;
+          text-align: center;
         }
-
-        @-o-keyframes blink {
-          67% {
-            opacity: 0;
-          }
+        .section-title:after {
+          border-bottom: 4px double #981c1c;
+          content: "";
+          display: block;
+          height: 1px;
+          margin: 30px auto;
+          opacity: 0.5;
+          width: 200px;
         }
-
-        @keyframes blink {
-          67% {
-            opacity: 0;
-          }
-        }
-
-        @import url("https://fonts.googleapis.com/css?family=Cedarville+Cursive");
       `}
     </style>
   </div>
