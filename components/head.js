@@ -14,7 +14,7 @@ const CustomHead = ({ title, t }) => (
       <meta property="og:description" content="xGoHorse Certification" />
       <meta
         property="og:image"
-        itemProp="image"
+        itemprop="image"
         content="https://xgohorse.com/static/logo.png"
       />
       <meta property="og:type" content="website" />
@@ -118,11 +118,6 @@ const CustomHead = ({ title, t }) => (
           margin: 0;
           padding-top: 70px;
         }
-        @media (max-width: 1024px) {
-          html {
-            font-size: 50%;
-          }
-        }
 
         @font-face {
           font-family: NexaRust;
@@ -140,7 +135,7 @@ const CustomHead = ({ title, t }) => (
 
         section {
           display: flex;
-          margin: 40px 0;
+          margin: 40px;
           flex-direction: column;
           flex-align: center;
           align-items: center;

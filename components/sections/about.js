@@ -10,7 +10,7 @@ export default ({ refProp }) => {
       <style jsx>
         {`
           .content {
-            margin: 0px 180px;
+            padding: 0px 180px;
           }
         `}
       </style>

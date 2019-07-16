@@ -17,7 +17,7 @@ export default () => {
             list-style: none;
           }
           li {
-            margin: 3rem 0;
+            margin: 50px 0px;
             line-height: 1.8;
           }
           li:first-child {

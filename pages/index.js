@@ -1,13 +1,12 @@
 import { useRef } from "react";
-import { withTranslation } from "react-i18next";
-import { Head, Hero, Header, Footer } from "../components";
+import { Head, Hero, Header } from "../components";
 import {
   SpeedSection,
   AboutSection,
   ShopSection
 } from "../components/sections";
 
-const Index = ({ t }) => {
+export default () => {
   const refWhatIs = useRef(null);
   const refSpeed = useRef(null);
   return (
@@ -17,10 +16,7 @@ const Index = ({ t }) => {
       <Hero />
       <AboutSection refProp={refWhatIs} />
       <SpeedSection refProp={refSpeed} />
-      <ShopSection muglink="https://produto.mercadolivre.com.br/MLB-1270404740-caneca-go-horse-certified-professional-_JM" />
-      <Footer />
+      <ShopSection />
     </div>
   );
 };
-
-export default withTranslation("index")(Index);
