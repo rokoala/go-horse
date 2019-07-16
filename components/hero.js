@@ -24,12 +24,12 @@ export default () => {
       <style jsx>
         {`
           .hero {
-            width: 100vw;
+            width: 100%;
             height: 60vh;
           }
           .hero-background {
             position: absolute;
-            width: 100vw;
+            width: 100%;
             height: 60vh;
             background: url("/static/background/ganapathy-kumar.jpg");
             background-color: #c59470;
@@ -40,7 +40,7 @@ export default () => {
           }
           .hero-text {
             position: absolute;
-            width: 100vw;
+            width: 100%;
             height: 60vh;
             display: flex;
             align-items: center;

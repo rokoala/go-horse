@@ -1,10 +1,8 @@
 import { useTranslation } from "react-i18next";
 
 export default () => {
-  const { t } = useTranslation("donate");
   return (
-    <React.Fragment>
-      <div className="help-us">{t("help-us")}</div>
+    <>
       <form
         action="https://www.paypal.com/cgi-bin/webscr"
         method="post"
@@ -64,16 +62,6 @@ export default () => {
           height="1"
         />
       </form>
-
-      <style jsx>{`
-        @import url("https://fonts.googleapis.com/css?family=Raleway");
-        .help-us {
-          font-family: arial;
-          margin: 12px 0;
-          text-align: center;
-          font-family: "Raleway", sans-serif;
-        }
-      `}</style>
-    </React.Fragment>
+    </>
   );
 };

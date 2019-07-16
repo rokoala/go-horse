@@ -35,8 +35,8 @@ export default ({ refs }) => (
       {`
         header {
           display: flex;
-          z-index: 1;
-          max-height: 70px;
+          z-index: 3;
+          max-height: 4.5rem;
           height: 100%;
           width: 100%;
           background-color: black;
@@ -74,7 +74,8 @@ export default ({ refs }) => (
           margin: 0 8px;
         }
         li span {
-          padding: 30px 20px;
+          padding: 1.8rem 1rem;
+          font-size: 1rem;
         }
         nav {
           margin-left: auto;
