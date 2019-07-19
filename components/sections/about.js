@@ -2,10 +2,10 @@ export default ({ refProp }) => {
   return (
     <>
       <section ref={refProp} className="content">
-        <h3>What is eXtreme GoHorse</h3>
+        <h3>What is extreme gohorse</h3>
         <p>
-          eXtreme GoHorse é uma sátira as metodologias de desenvolvimento e
-          gerenciamento de projetos
+          <b>eXtreme GoHorse</b> é uma sátira as metodologias de desenvolvimento
+          e gerenciamento de projetos
         </p>
       </section>
       <style jsx>
@@ -13,7 +13,16 @@ export default ({ refProp }) => {
           .content {
             display: flex;
             flex-direction: row;
-            padding: 0px 180px;
+            padding: 30px 200px;
+            justify-content: center;
+          }
+          h3 {
+            margin: 35px;
+            line-height: 30px;
+            text-align: right;
+          }
+          p {
+            line-height: 20px;
           }
         `}
       </style>

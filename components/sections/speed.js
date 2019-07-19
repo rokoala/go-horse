@@ -22,7 +22,7 @@ export default ({ refProp }) => (
     <style jsx>{`
       .speed-container {
         width: 100%;
-        margin: 20px 0;
+        background-color: #fffefb;
       }
       .speed-comparison {
         width: 100%;

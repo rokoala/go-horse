@@ -135,17 +135,16 @@ const CustomHead = ({ title, t }) => (
 
         section {
           display: flex;
-          margin: 40px;
           flex-direction: column;
           flex-align: center;
           align-items: center;
           font-size: 1rem;
-          background-color: white;
+          padding: 30px 0;
           color: black;
         }
         .section-title {
           margin: 20px 0;
-          font-size: 1.5rem;
+          font-size: 1.3rem;
           text-transform: uppercase;
           font-family: Weston;
           text-align: center;
