@@ -51,7 +51,6 @@ export default () => {
             text-align: center;
             font-family: NexaRust;
             font-size: 4rem;
-            text-shadow: 0px 0px 10px grey;
           }
           .logo {
             background-color: white;

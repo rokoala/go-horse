@@ -36,13 +36,14 @@ export default ({ refs }) => (
         header {
           display: flex;
           z-index: 1;
-          max-height: 70px;
+          max-height: 3.5rem;
           height: 100%;
           width: 100%;
-          background-color: black;
           position: fixed;
           top: 0;
           color: white;
+          background-color: white;
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
         }
         .title {
           background: url(/static/logo.png);
@@ -69,12 +70,11 @@ export default ({ refs }) => (
         li {
           font-family: Weston;
           text-transform: uppercase;
-          font-weight: bold;
-          color: gold;
+          color: black;
           margin: 0 8px;
         }
         li span {
-          padding: 30px 20px;
+          padding: 30px 10px;
         }
         nav {
           margin-left: auto;

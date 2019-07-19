@@ -116,7 +116,7 @@ const CustomHead = ({ title, t }) => (
         body {
           font-family: "Quicksand", sans-serif;
           margin: 0;
-          padding-top: 70px;
+          padding-top: 3.5rem;
         }
 
         @font-face {
