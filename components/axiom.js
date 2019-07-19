@@ -1,30 +1,25 @@
 import { useTranslation } from "react-i18next";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 
 export default () => {
   const { t } = useTranslation("axioms");
 
   return (
-    <ul className="axioms">
-      {Array.apply(null, Array(24)).map((axiom, index) => (
-        <li key={index}>
-          <h3>{t("title" + (index + 1))}</h3>
-          <p>{t("description" + (index + 1))}</p>
-        </li>
-      ))}
-      <style jsx>
-        {`
-          ul.axioms {
-            list-style: none;
+    <>
+      <Carousel showThumbs={false}>
+        {Array.apply(null, Array(24)).map((axiom, index) => (
+          <div className="axiom" key={index}>
+            <h3>{t("title" + (index + 1))}</h3>
+            <p>{t("description" + (index + 1))}</p>
+          </div>
+        ))}
+        <style jsx>{`
+          .axiom {
+            color: white;
           }
-          li {
-            margin: 50px 0px;
-            line-height: 1.8;
-          }
-          li:first-child {
-            margin: 0px;
-          }
-        `}
-      </style>
-    </ul>
+        `}</style>
+      </Carousel>
+    </>
   );
 };
