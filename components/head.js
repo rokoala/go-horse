@@ -144,18 +144,18 @@ const CustomHead = ({ title, t }) => (
           color: black;
         }
         .section-title {
-          margin: 40px 0;
-          font-size: 2rem;
+          margin: 20px 0;
+          font-size: 1.5rem;
           text-transform: uppercase;
           font-family: Weston;
           text-align: center;
         }
         .section-title:after {
-          border-bottom: 4px double #981c1c;
+          border-bottom: 3px double #981c1c;
           content: "";
           display: block;
           height: 1px;
-          margin: 30px auto;
+          margin: 10px auto;
           opacity: 0.5;
           width: 200px;
         }
