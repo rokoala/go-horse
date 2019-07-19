@@ -18,7 +18,10 @@ export default () => {
       <AboutSection refProp={refWhatIs} />
       <Axiom />
       <SpeedSection refProp={refSpeed} />
-      <ShopSection />
+      <ShopSection
+        imgSrc="https://http2.mlstatic.com/caneca-go-horse-certified-professional-D_NQ_NP_898720-MLB30696159675_052019-F.webp"
+        link="https://produto.mercadolivre.com.br/MLB-1270404740-caneca-go-horse-certified-professional-_JM"
+      />
     </div>
   );
 };
