@@ -5,6 +5,7 @@ import {
   AboutSection,
   ShopSection
 } from "../components/sections";
+import { Axiom } from "../components";
 
 export default () => {
   const refWhatIs = useRef(null);
@@ -15,6 +16,7 @@ export default () => {
       <Head title="XGH Certification" />
       <Hero />
       <AboutSection refProp={refWhatIs} />
+      <Axiom />
       <SpeedSection refProp={refSpeed} />
       <ShopSection />
     </div>
