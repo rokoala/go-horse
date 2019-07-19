@@ -1,10 +1,6 @@
-import { useTranslation } from "react-i18next";
-
 export default () => {
-  const { t } = useTranslation("donate");
   return (
     <React.Fragment>
-      <div className="help-us">{t("help-us")}</div>
       <form
         action="https://www.paypal.com/cgi-bin/webscr"
         method="post"
