@@ -1,12 +1,12 @@
+import { useTranslation } from "react-i18next";
+
 export default ({ refProp }) => {
+  const { t } = useTranslation("about");
   return (
     <>
       <section ref={refProp} className="content">
-        <h3>What is extreme gohorse</h3>
-        <p>
-          <b>eXtreme GoHorse</b> é uma sátira as metodologias de desenvolvimento
-          e gerenciamento de projetos
-        </p>
+        <h3>{t("what-is-title")}</h3>
+        <p>{t("what-is")}</p>
       </section>
       <style jsx>
         {`

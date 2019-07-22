@@ -1,4 +1,5 @@
 import { Button } from "../components";
+import { useTranslation } from "react-i18next";
 import Router from "next/router";
 
 export default () => {
@@ -11,6 +12,8 @@ export default () => {
       Router.push({ pathname: "/exam", query: { name } }, "/exam");
     }
   };
+
+  const { t } = useTranslation("hero");
 
   return (
     <>

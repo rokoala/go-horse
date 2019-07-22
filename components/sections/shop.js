@@ -7,7 +7,7 @@ export default ({ link, imgSrc }) => {
       <h3 className="section-title">Shop</h3>
       <img src={imgSrc} />
       <h4>Caneca GoHorse Process</h4>
-      <button onClick={buy}>Compre</button>
+      <button onClick={buy}>Comprar</button>
       <style jsx>{`
         img {
           width: 300px;

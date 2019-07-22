@@ -1,6 +1,9 @@
 import Router from "next/router";
+import { useTranslation } from "react-i18next";
 
 export default ({ refProp }) => {
+  const { t } = useTranslation("exam");
+
   const go = () => {
     const name = prompt("Please fill your name", "");
     if (name !== null || name !== "") {
@@ -10,9 +13,9 @@ export default ({ refProp }) => {
   return (
     <>
       <section ref={refProp} className="content">
-        <h3 className="section-title">Do the exam</h3>
-        <p>Faça seu exame para obter o certificado xGoHorse de graça</p>
-        <button onClick={go}>Começar</button>
+        <h3 className="section-title">{t("dotheexam-title")}</h3>
+        <p>{t("dotheexam")}</p>
+        <button onClick={go}>{t("begin")}</button>
       </section>
       <style jsx>{`
         p {
