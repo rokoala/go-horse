@@ -50,8 +50,14 @@ export default () => {
           .title {
             text-align: center;
             font-family: NexaRust;
-            font-size: 4rem;
+            font-size: 50px;
           }
+          @media (max-width: 900px) {
+            .title {
+              font-size: 30px;
+            }
+          }
+
           .logo {
             background-color: white;
             border-radius: 50%;

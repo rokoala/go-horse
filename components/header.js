@@ -6,7 +6,7 @@ export default ({ refs }) => (
       <h1 href="https://xgohorse.com/" rel="home" className="title">
         xGoHorse
       </h1>
-      <nav>
+      {/* <nav>
         <ul>
           <li
             onClick={() => {
@@ -29,14 +29,14 @@ export default ({ refs }) => (
             <span>Shop</span>
           </li>
         </ul>
-      </nav>
+      </nav> */}
     </header>
     <style jsx>
       {`
         header {
           display: flex;
-          z-index: 1;
-          max-height: 3.5rem;
+          z-index: 4;
+          max-height: 50px;
           height: 100%;
           width: 100%;
           position: fixed;
@@ -48,16 +48,24 @@ export default ({ refs }) => (
         .title {
           background: url(/static/logo.png);
           text-indent: -99999px;
-          width: 110px;
-          height: 110px;
+          width: 90px;
+          height: 90px;
           box-shadow: 0 4px 8px 0px grey;
           border-radius: 65px;
           background-repeat: no-repeat;
           background-size: contain;
           padding: 0;
-          margin: 18px 50px;
+          margin: 8px;
           background-color: white;
         }
+        @media screen and (max-width: 900px) {
+          .title {
+            width: 90px;
+            height: 90px;
+            margin: 8px;
+          }
+        }
+
         ul,
         li {
           cursor: pointer;
@@ -74,7 +82,7 @@ export default ({ refs }) => (
           margin: 0 8px;
         }
         li span {
-          padding: 30px 10px;
+          padding: 10px 5px;
         }
         nav {
           margin-left: auto;

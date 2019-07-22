@@ -14,7 +14,12 @@ export default ({ refProp }) => {
         <p>Faça seu exame para obter o certificado xGoHorse de graça</p>
         <button onClick={go}>Começar</button>
       </section>
-      <style jsx>{``}</style>
+      <style jsx>{`
+        p {
+          padding: 20px;
+          text-align: center;
+        }
+      `}</style>
     </>
   );
 };

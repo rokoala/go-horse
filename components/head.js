@@ -116,7 +116,7 @@ const CustomHead = ({ title, t }) => (
         body {
           font-family: "Quicksand", sans-serif;
           margin: 0;
-          padding-top: 3.5rem;
+          padding-top: 30px;
         }
 
         @font-face {
@@ -143,8 +143,7 @@ const CustomHead = ({ title, t }) => (
           color: black;
         }
         .section-title {
-          margin: 20px 0;
-          font-size: 1.3rem;
+          font-size: 20px;
           text-transform: uppercase;
           font-family: Weston;
           text-align: center;

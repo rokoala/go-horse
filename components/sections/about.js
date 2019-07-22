@@ -13,7 +13,7 @@ export default ({ refProp }) => {
           .content {
             display: flex;
             flex-direction: row;
-            padding: 30px 200px;
+            // padding: 30px 200px;
             justify-content: center;
           }
           h3 {
@@ -23,6 +23,7 @@ export default ({ refProp }) => {
           }
           p {
             line-height: 20px;
+            padding: 20px;
           }
         `}
       </style>
