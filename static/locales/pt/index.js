@@ -7,3 +7,4 @@ export { default as result } from "./result.json";
 export { default as index } from "./index.json";
 export { default as head } from "./head.json";
 export { default as books } from "./books.json";
+export { default as about } from "./about.json";

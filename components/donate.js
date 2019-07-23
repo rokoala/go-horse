@@ -1,30 +1,20 @@
-import { useTranslation } from "react-i18next";
-
 export default () => {
-  const { t } = useTranslation("donate");
   return (
     <React.Fragment>
-      <div className="help-us">{t("help-us")}</div>
       <form
         action="https://www.paypal.com/cgi-bin/webscr"
         method="post"
         target="_top"
       >
-        <input type="hidden" name="cmd" value="_donations" />
-        <input
-          type="hidden"
-          name="business"
-          value="xghcertification@gmail.com"
-        />
-        <input type="hidden" name="currency_code" value="BRL" />
-        <input type="hidden" name="amount" value="5" />
+        <input type="hidden" name="cmd" value="_s-xclick" />
+        <input type="hidden" name="hosted_button_id" value="FRGV4A8A26XW6" />
         <input
           type="image"
-          src="https://www.paypalobjects.com/pt_BR/i/btn/btn_donate_LG.gif"
+          src="https://www.paypalobjects.com/pt_BR/i/btn/btn_donate_SM.gif"
           border="0"
           name="submit"
           title="PayPal - The safer, easier way to pay online!"
-          alt="Donate with PayPal button"
+          alt="Faça doações com o botão do PayPal"
         />
         <img
           alt=""
@@ -34,20 +24,13 @@ export default () => {
           height="1"
         />
       </form>
-
       <form
         action="https://www.paypal.com/cgi-bin/webscr"
         method="post"
         target="_top"
       >
-        <input type="hidden" name="cmd" value="_donations" />
-        <input
-          type="hidden"
-          name="business"
-          value="xghcertification@gmail.com"
-        />
-        <input type="hidden" name="currency_code" value="USD" />
-        <input type="hidden" name="amount" value="5" />
+        <input type="hidden" name="cmd" value="_s-xclick" />
+        <input type="hidden" name="hosted_button_id" value="FRGV4A8A26XW6" />
         <input
           type="image"
           src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
