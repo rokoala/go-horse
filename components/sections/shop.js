@@ -14,6 +14,10 @@ export default ({ link, imgSrc }) => {
         img {
           width: 300px;
         }
+        h4 {
+          font-size: 24px;
+          margin-top: 0;
+        }
       `}</style>
     </section>
   );

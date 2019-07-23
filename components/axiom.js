@@ -10,11 +10,11 @@ export default () => {
       <div className="my-carousel">
         <Carousel
           showIndicators={false}
-          showStatus={false}
+          showStatus={true}
           autoPlay={true}
           showThumbs={false}
           infiniteLoop={true}
-          interval={7000}
+          interval={5000}
           useKeyboardArrows={true}
         >
           {Array.apply(null, Array(24)).map((axiom, index) => (

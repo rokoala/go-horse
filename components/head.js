@@ -139,7 +139,7 @@ const CustomHead = ({ title, t }) => (
           flex-align: center;
           align-items: center;
           font-size: 1rem;
-          padding: 30px 0;
+          padding: 55px 0;
           color: black;
         }
         .section-title {

@@ -63,7 +63,7 @@ export default ({ refProp }) => {
         form input {
           margin: 10px 0;
           border: none;
-          border: 1px solid gray;
+          border: 1px solid #eaeaea;
           font-family: "Quicksand", sans-serif;
           font-size: 18px;
           border-radius: 5px;
@@ -72,7 +72,7 @@ export default ({ refProp }) => {
         form input:focus {
           outline: none;
         }
-        p {
+        h4 {
           text-align: center;
         }
       `}</style>
