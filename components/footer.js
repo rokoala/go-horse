@@ -25,18 +25,27 @@ export default () => {
             margin-top: 15px;
           }
           .contact {
-            margin-bottom: 20px;
+            margin-bottom: 35px;
+          }
+          a {
+            text-decoration: none;
+            line-height: 25px;
+            font-weight: bold;
+            font-size: 14px;
+            color: #2f2f2f;
+        }
           }
           footer {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            margin-top: 20px;
+            margin-top: 50px;
             align-items: center;
-            border-top: 1px solid gray;
+            border-top: 1px solid rgba(0, 0, 0, 0.09);
             color: black;
             width: 100%;
-            padding: 15px;
+            padding: 20px;
+            background-color: #efefef;
           }
         `}
       </style>

@@ -13,11 +13,10 @@ export default ({ refProp }) => {
           .content {
             display: flex;
             flex-direction: row;
-            // padding: 30px 200px;
             justify-content: center;
           }
           h3 {
-            margin: 35px;
+            margin: 20px;
             line-height: 30px;
             text-align: right;
           }

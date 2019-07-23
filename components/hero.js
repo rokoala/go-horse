@@ -1,20 +1,4 @@
-import { Button } from "../components";
-import { useTranslation } from "react-i18next";
-import Router from "next/router";
-
 export default () => {
-  const handleClickGo = evt => {
-    // const { t } = this.props;
-
-    // const name = prompt(t("enter-name"), "");
-    const name = prompt("Enter your name", "");
-    if (name !== null || name !== "") {
-      Router.push({ pathname: "/exam", query: { name } }, "/exam");
-    }
-  };
-
-  const { t } = useTranslation("hero");
-
   return (
     <>
       <div className="hero">
@@ -27,12 +11,12 @@ export default () => {
       <style jsx>
         {`
           .hero {
-            width: 100vw;
+            width: 100%;
             height: 60vh;
           }
           .hero-background {
             position: absolute;
-            width: 100vw;
+            width: 100%;
             height: 60vh;
             background: url("/static/background/ganapathy-kumar.jpg");
             background-color: #c59470;
@@ -43,7 +27,7 @@ export default () => {
           }
           .hero-text {
             position: absolute;
-            width: 100vw;
+            width: 100%;
             height: 60vh;
             display: flex;
             align-items: center;
@@ -80,5 +64,3 @@ export default () => {
     </>
   );
 };
-
-// Credits font Pavel Pavlov https://www.fontfabric.com/fonts/weston/

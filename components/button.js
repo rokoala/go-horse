@@ -1,23 +1,26 @@
-export default ({ children, onClick }) => {
+export default ({ children, onClick, style }) => {
   return (
     <>
-      <button onClick={onClick}>{children}</button>
+      <button type="button" style={style} onClick={onClick}>
+        {children}
+      </button>
       <style jsx>
         {`
           button {
             min-width: 16rem;
-            margin: 0.5rem;
+            line-height: 20px;
             cursor: pointer;
-            font-family: Weston;
-            background-color: brown;
+            font-family: "Quicksand", sans-serif;
+            font-weight: bold;
+            background-color: #79f371;
             padding: 15px;
             color: white;
-            border: none;
-            box-shadow: 0 3px 6px -3px #a0442f;
+            border-top: 0;
+            border-right: 0;
+            border-left: 0;
+            border-bottom: solid 3px #70e074;
+            box-shadow: 0 3px 6px -3px #9db998;
             border-radius: 5px;
-          }
-          button:hover {
-            box-shadow: 0 10px 16px -10px #ab4a34;
           }
           button:focus {
             outline: none;

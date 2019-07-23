@@ -5,6 +5,8 @@ const scrollToRef = ref => window.scrollTo(0, ref.current.offsetTop - 100);
 
 const Header = ({ refs, t, i18n }) => {
   const [language, setLanguage] = useState(i18n.language);
+  const [prevScrollpos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
 
   const handleLanguage = () => {
     i18n.changeLanguage(event.target.value);
@@ -17,9 +19,24 @@ const Header = ({ refs, t, i18n }) => {
     }, 200);
   }, []);
 
+  const handleScroll = () => {
+    const currentScrollPos = window.pageYOffset;
+    const isVisible = prevScrollpos > currentScrollPos;
+    setPrevScrollPos(window.pageYOffset);
+    setVisible(isVisible);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
+
   return (
     <>
-      <header>
+      <header className={!visible && "hide"}>
         <h1 href="https://xgohorse.com/" rel="home" className="title">
           xGoHorse
         </h1>
@@ -68,6 +85,7 @@ const Header = ({ refs, t, i18n }) => {
             color: black;
             background-color: white;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            transition: all 0.5s ease 0s;
           }
           .title {
             background: url(/static/logo.png);
@@ -117,6 +135,9 @@ const Header = ({ refs, t, i18n }) => {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+          }
+          .hide {
+            top: -110px;
           }
         `}
       </style>

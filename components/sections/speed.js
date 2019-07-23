@@ -34,7 +34,7 @@ export default ({ refProp }) => (
         z-index: 2;
         width: 0px;
         color: black;
-        padding-top: 15px;
+        padding-top: 5px;
         padding-right: 20px;
         padding-left: 20px;
         background-color: #ffffff;

@@ -16,7 +16,6 @@ class Error extends React.Component {
             <a href="/">eXtreme GoHorse Process Certification</a>
           </h1>
           <h1>{t("404")}</h1>
-          {/* <p>{t("explain")}</p> */}
           <img src="/static/images/construction.gif" />
           <p>{t("show-gif")}</p>
           <img src="/static/images/baby.gif" />

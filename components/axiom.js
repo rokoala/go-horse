@@ -40,11 +40,21 @@ export default () => {
           p {
             padding: 20px;
           }
+          .my-carousel {
+            border-top: 1px solid rgba(0, 0, 0, 0.09);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+          }
         `}
       </style>
       <style jsx global>{`
         li.slide {
           background: #efefef !important;
+        }
+        .carousel .control-prev.control-arrow:before {
+          border-right: 8px solid black !important;
+        }
+        .carousel .control-next.control-arrow:before {
+          border-left: 8px solid black !important;
         }
       `}</style>
     </>
