@@ -34,8 +34,8 @@ const Index = ({ i18n }) => {
       <ExamSection />
       {i18n.language === "pt" && (
         <ShopSection
-          imgSrc="https://http2.mlstatic.com/caneca-go-horse-certified-professional-D_NQ_NP_898720-MLB30696159675_052019-F.webp"
-          link="https://produto.mercadolivre.com.br/MLB-1270404740-caneca-go-horse-certified-professional-_JM"
+          imgSrc="https://http2.mlstatic.com/caneca-go-horse-certified-professional-D_NQ_NP_755061-MLB31828910724_082019-F.webp"
+          link="https://produto.mercadolivre.com.br/MLB-1299690936-caneca-go-horse-certified-professional-_JM"
         />
       )}
       <Footer />
