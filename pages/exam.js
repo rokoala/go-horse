@@ -111,7 +111,7 @@ class Exam extends React.PureComponent {
     const { router, t } = this.props;
     const { questions, questionIndex } = this.state;
 
-    if (!router.query.name) {
+    if (!router.query.name && typeof window !== "undefined") {
       router.push("/");
       return <div />;
     } else {

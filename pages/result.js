@@ -20,7 +20,7 @@ export default withRouter(({ router }) => {
       <Result name={router.query.name} result={router.query.result} />
     );
   } else {
-    router.push("/");
+    if (typeof window !== "undefined") router.push("/");
   }
 
   return (
