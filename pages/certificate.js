@@ -55,10 +55,8 @@ class Certificate extends React.PureComponent {
         <Head title="XGH Certification" />
         <div className="certificate">
           <div className="cursive">{t("this-certify")}</div>
-          <div className="wrong cursive">Dennis Ritchie</div>
           <h2 className="cursive name">{router.query.name}</h2>
           <div className="cursive">{t("has-achieved")}</div>
-          <div className="wrong cursive">COBiT Foundation</div>
           <div className="go-horse-title">
             eXtreme GoHorse Process Certificate
           </div>
@@ -77,13 +75,11 @@ class Certificate extends React.PureComponent {
           <div>580492094808472343558</div>
         </div>
         {this.state.showShareButtons ? (
-          <section className="share-content">
+          <div className="share-content">
             <h3>{t("share")}</h3>
             <div className="share-buttons">
               <a
-                href={`https://wa.me/?text=http%3A%2F%2Fxgohorse.com%2Fcertificate%3Fuser%3D${
-                  this.state.userkey
-                }`}
+                href={`https://wa.me/?text=http%3A%2F%2Fxgohorse.com%2Fcertificate%3Fuser%3D${this.state.userkey}`}
                 target="_blank"
                 className="whatsapp"
               />
@@ -194,12 +190,12 @@ class Certificate extends React.PureComponent {
               </CopyToClipboard>
               <button onClick={() => window.print()}>{t("print")}</button>
             </p>
-            <div style={{ marginBottom: 25 }}>
+            <div>
               <Link href="/">
                 <button>{t("back")}</button>
               </Link>
             </div>
-          </section>
+          </div>
         ) : (
           <button className="want">
             <Link href="/">
@@ -212,11 +208,13 @@ class Certificate extends React.PureComponent {
           {`
             img {
               background-color: white;
+              margin: 5px 0;
               border-style: outset;
-              border-color: gold;
+              border-radius: 50%;
             }
             .content {
               display: flex;
+              margin-top: -50px;
               flex-direction: column;
               justify-content: center;
               align-items: center;
@@ -232,7 +230,7 @@ class Certificate extends React.PureComponent {
               flex-direction: column;
               justify-content: center;
               align-items: center;
-              background-color: #c5b15669;
+              background-color: #e8d78969;
               background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23edf0dd' fill-opacity='0.54'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
             }
             h1 {
@@ -246,7 +244,7 @@ class Certificate extends React.PureComponent {
             .share-buttons {
               display: flex;
               align-content: space-between;
-              margin-bottom: 20px;
+              margin-bottom: 10px;
             }
             .whatsapp {
               background-image: url("/static/images/whatsapp.png");
@@ -258,14 +256,13 @@ class Certificate extends React.PureComponent {
             }
             .cursive {
               font-family: "Cedarville Cursive", cursive;
-              font-size: 2rem;
+              font-size: 1.8rem;
             }
             .go-horse-title {
               font-family: "Cedarville Cursive", cursive;
-              color: red;
+              color: #963030;
               font-size: 2rem;
-              text-shadow: 1px 1px 1px #4a4141;
-              margin-bottom: 20px;
+              margin: 20px 0;
             }
             .want {
               margin: 20px;
@@ -279,13 +276,36 @@ class Certificate extends React.PureComponent {
               }
               .name {
                 margin: 0px;
-                padding: 5px;
+                padding: 0px;
               }
               .go-horse-title {
                 margin: 0px;
               }
+              html {
+                background-color: #ffdeb3 !important;
+              }
               body {
-                margin: 1cm;
+                padding-top: 0 !important;
+                background-color: #ffdeb3 !important;
+              }
+              .content {
+                margin-top: 0;
+              }
+              .certificate {
+                width: 100%;
+                height: 100vh;
+              }
+              .cursive {
+                font-size: 2.5rem;
+              }
+              .go-horse-title {
+                font-size: 3rem;
+              }
+              .name {
+                line-height: 6rem;
+              }
+              * {
+                font-size: 1.5rem;
               }
             }
           `}
@@ -295,6 +315,11 @@ class Certificate extends React.PureComponent {
             @media print {
               body::before {
                 content: none;
+                background-color: #ffdeb3;
+              }
+              body {
+                padding-top: 0 !important;
+                background-color: #ffdeb3 !important;
               }
             }
           `}
