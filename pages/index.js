@@ -3,7 +3,6 @@ import { Head, Hero, Header, Footer } from "../components";
 import {
   SpeedSection,
   AboutSection,
-  ShopSection,
   ExamSection
 } from "../components/sections";
 import AdSense from "react-adsense";
