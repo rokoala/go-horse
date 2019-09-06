@@ -35,7 +35,7 @@ const Index = ({ i18n }) => {
       <AdSense.Google
         client={adclient}
         slot="3286097608"
-        style={{ display: "flex", jusfifyContent: "center" }}
+        style={{ display: "flex", justifyContent: "center" }}
         format="auto"
         responsive="true"
       />
@@ -43,7 +43,7 @@ const Index = ({ i18n }) => {
       <AdSense.Google
         client={adclient}
         slot="6724162623"
-        style={{ display: "flex", jusfifyContent: "center" }}
+        style={{ display: "flex", justifyContent: "center" }}
         format="auto"
         responsive="true"
       />
@@ -58,7 +58,7 @@ const Index = ({ i18n }) => {
         client={adclient}
         className="adsbygoogle"
         slot="3725081307"
-        style={{ display: "flex", jusfifyContent: "center" }}
+        style={{ display: "flex", justifyContent: "center" }}
         responsive="true"
         format="auto"
       />
