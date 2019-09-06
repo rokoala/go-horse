@@ -37,25 +37,25 @@ const Index = ({ i18n }) => {
         client={adclient}
         slot="3286097608"
         style={{ display: "flex", justifyContent: "center" }}
-        format="fluid"
+        format="auto"
         responsive="true"
       />
       <SpeedSection refProp={refSpeed} />
       <AdSense.Google
         className="adsbygoogle"
         client={adclient}
-        layout="in-article"
-        slot="3973520985"
-        style={{ display: "block", textAlign: "center" }}
-        format="fluid"
+        slot="6724162623"
+        style={{ display: "block" }}
+        format="auto"
         responsive="true"
       />
       <ExamSection />
       <AdSense.Google
         client={adclient}
         className="adsbygoogle"
-        slot="6587048367"
-        style={{ display: "block", textAlign: "center" }}
+        slot="4615491145"
+        style={{ display: "block" }}
+        format="auto"
         responsive="true"
       />
       <Footer />
