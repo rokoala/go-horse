@@ -33,18 +33,21 @@ const Index = ({ i18n }) => {
       <AboutSection refProp={refWhatIs} />
       <Axiom />
       <AdSense.Google
+        className="adsbygoogle"
         client={adclient}
         slot="3286097608"
         style={{ display: "flex", justifyContent: "center" }}
-        format="auto"
+        format="fluid"
         responsive="true"
       />
       <SpeedSection refProp={refSpeed} />
       <AdSense.Google
+        className="adsbygoogle"
         client={adclient}
-        slot="6724162623"
-        style={{ display: "flex", justifyContent: "center" }}
-        format="auto"
+        layout="in-article"
+        slot="3973520985"
+        style={{ display: "block", textAlign: "center" }}
+        format="fluid"
         responsive="true"
       />
       <ExamSection />
@@ -57,10 +60,10 @@ const Index = ({ i18n }) => {
       <AdSense.Google
         client={adclient}
         className="adsbygoogle"
-        slot="3725081307"
-        style={{ display: "flex", justifyContent: "center" }}
-        responsive="true"
-        format="auto"
+        slot="6587048367"
+        layoutKey="-6t+ed+2i-1n-4w"
+        style={{ display: "block" }}
+        format="fluid"
       />
 
       <Footer />
