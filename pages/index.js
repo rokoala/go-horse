@@ -19,10 +19,10 @@ const Index = ({ i18n }) => {
   const refSpeed = useRef(null);
 
   useEffect(() => {
-    (window.adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-1462658131006885",
-      enable_page_level_ads: true
-    });
+    // (window.adsbygoogle = window.adsbygoogle || []).push({
+    //   google_ad_client: "ca-pub-1462658131006885",
+    //   enable_page_level_ads: true
+    // });
     ReactGA.initialize("UA-137508594-1");
     ReactGA.pageview(document.location.pathname);
   }, []);
@@ -34,6 +34,10 @@ const Index = ({ i18n }) => {
       <Hero />
       <AboutSection refProp={refWhatIs} />
       <Axiom />
+      <amp-auto-ads
+        type="adsense"
+        data-ad-client="ca-pub-1462658131006885"
+      ></amp-auto-ads>
       {/* <AdSense.Google
         className="adsbygoogle"
         client={adclient}
