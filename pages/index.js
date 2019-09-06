@@ -15,10 +15,10 @@ const Index = ({ i18n }) => {
   const refSpeed = useRef(null);
 
   useEffect(() => {
-    (window.adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-1462658131006885",
-      enable_page_level_ads: true
-    });
+    // (window.adsbygoogle = window.adsbygoogle || []).push({
+    //   google_ad_client: "ca-pub-1462658131006885",
+    //   enable_page_level_ads: true
+    // });
     ReactGA.initialize("UA-137508594-1");
     ReactGA.pageview(document.location.pathname);
   }, []);
@@ -28,6 +28,17 @@ const Index = ({ i18n }) => {
       <Header refs={{ refWhatIs, refSpeed }} />
       <Head title="XGH Certification" />
       <Hero />
+      <amp-ad
+        width="100vw"
+        height="320"
+        type="adsense"
+        data-ad-client="ca-pub-1462658131006885"
+        data-ad-slot="6724162623"
+        data-auto-format="rspv"
+        data-full-width
+      >
+        <div overflow></div>
+      </amp-ad>
       <AboutSection refProp={refWhatIs} />
       <Axiom />
       <SpeedSection refProp={refSpeed} />

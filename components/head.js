@@ -8,13 +8,18 @@ const CustomHead = ({ title, t }) => (
         async
         src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
       />
+      <script
+        async
+        custom-element="amp-ad"
+        src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
+      ></script>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta property="og:site_name" content="xGoHorse Certification" />
       <meta property="og:title" content="xGoHorse Certification" />
       <meta property="og:description" content="xGoHorse Certification" />
       <meta
         property="og:image"
-        itemprop="image"
+        itemProp="image"
         content="https://xgohorse.com/static/logo.png"
       />
       <meta property="og:type" content="website" />
