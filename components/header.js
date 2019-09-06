@@ -15,7 +15,11 @@ const Header = ({ refs, t, i18n }) => {
 
   useEffect(() => {
     setTimeout(() => {
-      i18n.changeLanguage(i18n.language);
+      const language =
+        i18n.language.toLowerCase() === "pt-br"
+          ? "pt"
+          : i18n.language.toLowerCase();
+      i18n.changeLanguage(language);
     }, 200);
   }, []);
 
