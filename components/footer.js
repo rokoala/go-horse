@@ -1,4 +1,4 @@
-import { Donate, SharePage } from "./";
+import { SharePage } from "./";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
@@ -13,7 +13,6 @@ export default () => {
         <a className="contact" href="mailto:xghcertification@gmail.com">
           {t("contact-us")}
         </a>
-        <Donate />
         <div className="share-buttons">
           <SharePage />
         </div>
@@ -22,10 +21,9 @@ export default () => {
         {`
           .share-buttons {
             display: flex;
-            margin-top: 15px;
           }
           .contact {
-            margin-bottom: 35px;
+            margin-bottom: 20px;
           }
           a {
             text-decoration: none;
@@ -45,7 +43,7 @@ export default () => {
             color: black;
             width: 100%;
             padding: 20px;
-            background-color: #efefef;
+            background-color: white;
           }
         `}
       </style>

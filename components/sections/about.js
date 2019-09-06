@@ -10,18 +10,27 @@ export default ({ refProp }) => {
       </section>
       <style jsx>
         {`
+          section {
+            background: #f5d7b0;
+            color: black;
+            height: 390px;
+            font-size: 20px;
+          }
           .content {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: center;
+            text-align: center;
           }
           h3 {
             margin: 20px;
             line-height: 30px;
-            text-align: right;
+            font-family: Weston;
+            font-size: 25px;
+            color: #924116;
           }
           p {
-            line-height: 20px;
+            line-height: 30px;
             padding: 20px;
           }
         `}

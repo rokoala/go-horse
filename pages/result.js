@@ -32,9 +32,6 @@ export default withRouter(({ router }) => {
         </h1>
       </header>
       {userResult}
-      <div className="donate">
-        <Donate />
-      </div>
       <style jsx>
         {`
           header {
@@ -50,17 +47,6 @@ export default withRouter(({ router }) => {
             justify-content: center;
             flex-direction: column;
             height: 100vh;
-          }
-          .donate {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-top: auto;
-            padding: 25px;
-            background-color: white;
-            border: 1px solid rgba(0, 0, 0, 0.09);
           }
         `}
       </style>

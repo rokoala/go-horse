@@ -4,7 +4,9 @@ import {
   SpeedSection,
   AboutSection,
   ExamSection,
-  BooksSection
+  BooksSection,
+  CowboyCoderSection,
+  ToolsSection
 } from "../components/sections";
 import AdSense from "react-adsense";
 import ReactGA from "react-ga";
@@ -41,6 +43,7 @@ const Index = ({ i18n }) => {
         responsive="true"
       />
       <SpeedSection refProp={refSpeed} />
+      <CowboyCoderSection />
       <AdSense.Google
         className="adsbygoogle"
         client={adclient}
@@ -50,6 +53,7 @@ const Index = ({ i18n }) => {
         responsive="true"
       />
       <ExamSection />
+      <ToolsSection />
       <BooksSection />
       <AdSense.Google
         client={adclient}

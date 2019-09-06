@@ -122,6 +122,7 @@ const CustomHead = ({ title, t }) => (
           font-family: "Quicksand", sans-serif;
           margin: 0;
           padding-top: 50px;
+          background-color: #ffdeb3;
         }
 
         @font-face {
@@ -144,11 +145,11 @@ const CustomHead = ({ title, t }) => (
           flex-align: center;
           align-items: center;
           font-size: 1rem;
-          padding: 55px 0;
+          padding: 45px 0;
           color: black;
         }
         .section-title {
-          font-size: 20px;
+          font-size: 30px;
           text-transform: uppercase;
           font-family: Weston;
           text-align: center;

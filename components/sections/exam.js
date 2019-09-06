@@ -1,6 +1,7 @@
 import Router from "next/router";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Blink } from "../";
 import Button from "../button";
 
 export default ({ refProp }) => {
@@ -18,7 +19,10 @@ export default ({ refProp }) => {
     <>
       <section ref={refProp} className="content">
         <h3 className="section-title">{t("dotheexam-title")}</h3>
-        <h4>{t("dotheexam")}</h4>
+        <h4>
+          <Blink speed="1s">{t("dotheexam")}</Blink>
+        </h4>
+        <p>{t("blink-recommendation")}</p>
         <form
           onSubmit={e => {
             e.preventDefault();
@@ -74,6 +78,9 @@ export default ({ refProp }) => {
         }
         h4 {
           text-align: center;
+          color: red;
+          font-size: 23px;
+          margin-bottom: 0;
         }
       `}</style>
     </>
