@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://xgohorse.com/sitemap.xml
