@@ -3,7 +3,8 @@ import { Head, Hero, Header, Footer } from "../components";
 import {
   SpeedSection,
   AboutSection,
-  ExamSection
+  ExamSection,
+  BooksSection
 } from "../components/sections";
 import AdSense from "react-adsense";
 import ReactGA from "react-ga";
@@ -49,6 +50,7 @@ const Index = ({ i18n }) => {
         responsive="true"
       />
       <ExamSection />
+      <BooksSection />
       <AdSense.Google
         client={adclient}
         className="adsbygoogle"

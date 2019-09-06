@@ -1,8 +1,8 @@
 import { withTranslation } from "react-i18next";
 
 const Books = ({ t }) => (
-  <div>
-    <h3 className="section-header">{t("good-books")}</h3>
+  <section>
+    <h3 className="section-title">{t("good-books")}</h3>
     <div className="books">
       <img className="book" src="/static/images/copy_paste.jpg" />
       <img className="book" src="/static/images/until_works.jpeg" />
@@ -12,10 +12,6 @@ const Books = ({ t }) => (
     </div>
     <style jsx>
       {`
-        .section-header {
-          text-align: center;
-          text-transform: uppercase;
-        }
         .books {
           display: flex;
           flex-wrap: wrap;
@@ -28,7 +24,7 @@ const Books = ({ t }) => (
         }
       `}
     </style>
-  </div>
+  </section>
 );
 
 export default withTranslation("books")(Books);
