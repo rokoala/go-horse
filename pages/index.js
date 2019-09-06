@@ -19,10 +19,10 @@ const Index = ({ i18n }) => {
   const refSpeed = useRef(null);
 
   useEffect(() => {
-    // (window.adsbygoogle = window.adsbygoogle || []).push({
-    //   google_ad_client: "ca-pub-1462658131006885",
-    //   enable_page_level_ads: true
-    // });
+    (window.adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-1462658131006885",
+      enable_page_level_ads: true
+    });
     ReactGA.initialize("UA-137508594-1");
     ReactGA.pageview(document.location.pathname);
   }, []);
@@ -34,35 +34,35 @@ const Index = ({ i18n }) => {
       <Hero />
       <AboutSection refProp={refWhatIs} />
       <Axiom />
-      <AdSense.Google
+      {/* <AdSense.Google
         className="adsbygoogle"
         client={adclient}
         slot="3286097608"
         style={{ display: "flex", justifyContent: "center" }}
         format="auto"
         responsive="true"
-      />
+      /> */}
       <SpeedSection refProp={refSpeed} />
       <CowboyCoderSection />
-      <AdSense.Google
+      {/* <AdSense.Google
         className="adsbygoogle"
         client={adclient}
         slot="6724162623"
         style={{ display: "flex", justifyContent: "center" }}
         format="auto"
         responsive="true"
-      />
+      /> */}
       <ExamSection />
       <ToolsSection />
       <BooksSection />
-      <AdSense.Google
+      {/* <AdSense.Google
         client={adclient}
         className="adsbygoogle"
         slot="4615491145"
         style={{ display: "flex", justifyContent: "center" }}
         format="auto"
         responsive="true"
-      />
+      /> */}
       <Footer />
     </>
   );

@@ -23,6 +23,7 @@ export default ({ name }) => {
           display: flex;
           flex-direction: column;
           align-items: center;
+          padding: 0;
         }
         .over-9000 {
           margin-top: 0;

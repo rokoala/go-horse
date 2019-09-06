@@ -79,7 +79,7 @@ export default ({ refProp }) => {
         h4 {
           text-align: center;
           color: red;
-          font-size: 23px;
+          font-size: 20px;
           margin-bottom: 0;
         }
       `}</style>
