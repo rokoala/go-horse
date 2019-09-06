@@ -45,7 +45,7 @@ const Index = ({ i18n }) => {
         className="adsbygoogle"
         client={adclient}
         slot="6724162623"
-        style={{ display: "block" }}
+        style={{ display: "flex", justifyContent: "center" }}
         format="auto"
         responsive="true"
       />
@@ -54,7 +54,7 @@ const Index = ({ i18n }) => {
         client={adclient}
         className="adsbygoogle"
         slot="4615491145"
-        style={{ display: "block" }}
+        style={{ display: "flex", justifyContent: "center" }}
         format="auto"
         responsive="true"
       />
