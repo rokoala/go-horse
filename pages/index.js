@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import { Head, Hero, Header, Footer } from "../components";
+import { IndexHead, Hero, Header, Footer } from "../components";
 import {
   SpeedSection,
   AboutSection,
@@ -19,10 +19,10 @@ const Index = ({ i18n }) => {
   const refSpeed = useRef(null);
 
   useEffect(() => {
-    (window.adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-1462658131006885",
-      enable_page_level_ads: true
-    });
+    // (window.adsbygoogle = window.adsbygoogle || []).push({
+    //   google_ad_client: "ca-pub-1462658131006885",
+    //   enable_page_level_ads: true
+    // });
     ReactGA.initialize("UA-137508594-1");
     ReactGA.pageview(document.location.pathname);
   }, []);
@@ -30,7 +30,7 @@ const Index = ({ i18n }) => {
   return (
     <>
       <Header refs={{ refWhatIs, refSpeed }} />
-      <Head title="XGH Certification" />
+      <IndexHead title="XGH Certification" />
       <Hero />
       <AboutSection refProp={refWhatIs} />
       <Axiom />

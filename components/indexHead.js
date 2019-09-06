@@ -1,9 +1,18 @@
 import Head from "next/head";
 import { withTranslation } from "react-i18next";
 
-const CustomHead = ({ title, t }) => (
+const IndexHead = ({ title, t }) => (
   <div>
     <Head>
+      <script
+        async
+        src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      />
+      <script
+        async
+        custom-element="amp-ad"
+        src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
+      ></script>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta property="og:site_name" content="xGoHorse Certification" />
       <meta property="og:title" content="xGoHorse Certification" />
@@ -159,4 +168,4 @@ const CustomHead = ({ title, t }) => (
   </div>
 );
 
-export default withTranslation("head")(CustomHead);
+export default withTranslation("head")(IndexHead);
