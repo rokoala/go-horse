@@ -51,21 +51,13 @@ const Index = ({ i18n }) => {
         responsive="true"
       />
       <ExamSection />
-      {(i18n.language === "pt" || i18n.language === "pt-BR") && (
-        <ShopSection
-          imgSrc="https://http2.mlstatic.com/caneca-go-horse-certified-professional-D_NQ_NP_755061-MLB31828910724_082019-F.webp"
-          link="https://produto.mercadolivre.com.br/MLB-1299690936-caneca-go-horse-certified-professional-_JM"
-        />
-      )}
       <AdSense.Google
         client={adclient}
         className="adsbygoogle"
         slot="6587048367"
-        layoutKey="-6t+ed+2i-1n-4w"
-        style={{ display: "block" }}
-        format="fluid"
+        style={{ display: "block", textAlign: "center" }}
+        responsive="true"
       />
-
       <Footer />
     </>
   );
