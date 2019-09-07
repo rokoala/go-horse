@@ -26,11 +26,15 @@ export default ({ refProp }) => (
       }
       .speed-comparison {
         width: 100%;
+        max-width: 900px;
         display: flex;
         background-color: burlywood;
       }
       .speed-comparison .finish {
-        display: block;
+        display: flex;
+        border: 1px solid #f3f3f3;
+        justify-content: center;
+        align-items: center;
         z-index: 2;
         width: 0px;
         color: black;
@@ -39,7 +43,7 @@ export default ({ refProp }) => (
         padding-left: 20px;
         background-color: #ffffff;
         word-break: break-all;
-        box-shadow: 2px 3px 5px lightslategrey;
+        box-shadow: 3px 0px 0px rgba(0, 0, 0, 0.3);
       }
       .speed-comparison .running-track {
         flex: 1;
