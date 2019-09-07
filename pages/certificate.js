@@ -214,7 +214,6 @@ class Certificate extends React.PureComponent {
             }
             .content {
               display: flex;
-              margin-top: -50px;
               flex-direction: column;
               justify-content: center;
               align-items: center;
