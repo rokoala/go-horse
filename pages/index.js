@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import { IndexHead, Hero, Header, Footer } from "../components";
+import { Head, Hero, Header, Footer } from "../components";
 import {
   SpeedSection,
   AboutSection,
@@ -30,7 +30,7 @@ const Index = ({ i18n }) => {
   return (
     <>
       <Header refs={{ refWhatIs, refSpeed }} />
-      <IndexHead title="XGH Certification" />
+      <Head title="XGH Certification" />
       <Hero />
       <AboutSection refProp={refWhatIs} />
       <Axiom />
