@@ -97,6 +97,15 @@ const CustomHead = ({ title, t }) => (
       />
       <meta name="theme-color" content="#ffffff" />
       <title>{title}</title>
+      <script
+        async
+        src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      />
+      <script
+        async
+        custom-element="amp-ad"
+        src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
+      ></script>
     </Head>
     <style jsx global>
       {`
