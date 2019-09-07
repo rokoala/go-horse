@@ -17,7 +17,7 @@ export default () => {
           .hero-background {
             position: absolute;
             width: 100%;
-            height: 60vh;
+            height: 100vh;
             background: url("/static/background/ganapathy-kumar.jpg");
             background-color: #c59470;
             background-position: center center;
@@ -28,7 +28,7 @@ export default () => {
           .hero-text {
             position: absolute;
             width: 100%;
-            height: 60vh;
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;

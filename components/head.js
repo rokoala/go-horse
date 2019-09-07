@@ -112,7 +112,6 @@ const CustomHead = ({ title, t }) => (
         body {
           font-family: "Quicksand", sans-serif;
           margin: 0;
-          padding-top: 50px;
           background-color: #ffdeb3;
         }
 
