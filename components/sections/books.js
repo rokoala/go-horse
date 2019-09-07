@@ -19,10 +19,14 @@ const Books = ({ t }) => (
           align-items: center;
         }
         .book {
-          margin: 20px 5px;
+          margin: 15px 5px;
           width: 250px;
-          height: 350px;
           box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.09);
+        }
+        @media all and (max-width: 900px) {
+          .book {
+            width: 170px;
+          }
         }
       `}
     </style>

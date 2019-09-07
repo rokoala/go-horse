@@ -3,34 +3,55 @@ import { withTranslation } from "react-i18next";
 const CowboyCoder = ({ t }) => (
   <section>
     <h3 className="section-title">{t("cowboy-coder-title")}</h3>
-    <article>
-      <h4 className="title">= Cowboy Coder =</h4>
-      <div className="content">
-        <img src="/static/images/cowboy-coder.svg"></img>
-        <p className="description">
-          <span>{t("cowboy-coder-description")}</span>{" "}
-          <a className="reference" href="https://wapu.us/wapuu/cowboy-coder/">
-            Wapuus
-          </a>
+    <div className="section-content">
+      <article>
+        <h4 className="title">Cowboy Coder</h4>
+        <div className="content">
+          <img src="/static/images/cowboy-coder.svg"></img>
+          <p className="description">
+            <span>{t("cowboy-coder-description")}</span>{" "}
+            <a className="reference" href="https://wapu.us/wapuu/cowboy-coder/">
+              Wapuus
+            </a>
+          </p>
+        </div>
+      </article>
+      <article>
+        <h4 className="title">Programming Mother***cker</h4>
+        <p className="description mf-description">
+          "We are a community of *** programmers who have been humiliated by
+          software development methodologies for years. We are tired of XP,
+          Scrum, Kanban, Waterfall, Software Craftsmanship (aka XP-Lite) and
+          anything else getting in the way of..."
         </p>
-      </div>
-    </article>
-    <article>
-      <h4 className="title">= Programming Mother***cker =</h4>
-      <p className="description mf-description">
-        "We are a community of *** programmers who have been humiliated by
-        software development methodologies for years. We are tired of XP, Scrum,
-        Kanban, Waterfall, Software Craftsmanship (aka XP-Lite) and anything
-        else getting in the way of..." {<br />}
-        <a className="reference" href="http://programming-motherfucker.com/">
+        <a
+          className="reference reference-pmf"
+          href="http://programming-motherfucker.com/"
+        >
           Programming Mother***cker
         </a>
-      </p>
-    </article>
+      </article>
+    </div>
     <style jsx>
       {`
+        .section-content {
+          display: flex;
+          width: 100%;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-around;
+        }
         article {
-          margin: 20px 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          background-color: #f3eccb;
+          margin: 15px;
+          padding: 30px;
+          max-width: 650px;
+          text-align: center;
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.09);
         }
         .content {
           display: flex;
@@ -47,13 +68,16 @@ const CowboyCoder = ({ t }) => (
         }
         @media screen and (min-width: 600px) {
           img {
-            width: 280px;
+            width: 250px;
           }
         }
         .description {
           font-size: 20px;
-          margin: 30px;
+          padding: 15px;
           text-align: center;
+        }
+        .reference-pmf {
+          font-size: 20px;
         }
         .mf-description {
           max-width: 750px;
@@ -66,7 +90,7 @@ const CowboyCoder = ({ t }) => (
           font-family: Weston;
           text-align: center;
           font-size: 22px;
-          margin: 5px 0;
+          margin: 20px 0;
           font-weight: bold;
           color: brown;
         }

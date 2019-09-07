@@ -86,8 +86,8 @@ const Header = ({ refs, t, i18n }) => {
             width: 100%;
             position: fixed;
             top: 0;
-            color: black;
-            background-color: white;
+            color: white;
+            background-color: black;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
             transition: all 0.5s ease 0s;
           }
@@ -142,6 +142,9 @@ const Header = ({ refs, t, i18n }) => {
           }
           .hide {
             top: -110px;
+          }
+          select {
+            background-color: white;
           }
         `}
       </style>

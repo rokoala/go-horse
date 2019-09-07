@@ -112,9 +112,7 @@ const CustomHead = ({ title, t }) => (
         body {
           font-family: "Quicksand", sans-serif;
           margin: 0;
-          background-color: #ffdeb3;
         }
-
         @font-face {
           font-family: NexaRust;
           src: url("/static/fonts/NexaRust.otf");
@@ -135,7 +133,7 @@ const CustomHead = ({ title, t }) => (
           flex-align: center;
           align-items: center;
           font-size: 1rem;
-          padding: 45px 0;
+          padding: 15px 0;
           color: black;
         }
         .section-title {

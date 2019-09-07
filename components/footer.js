@@ -30,8 +30,7 @@ export default () => {
             line-height: 25px;
             font-weight: bold;
             font-size: 14px;
-            color: #2f2f2f;
-        }
+            color: white;
           }
           footer {
             display: flex;
@@ -40,10 +39,9 @@ export default () => {
             margin-top: 50px;
             align-items: center;
             border-top: 1px solid rgba(0, 0, 0, 0.09);
-            color: black;
             width: 100%;
             padding: 20px;
-            background-color: white;
+            background-color: black;
           }
         `}
       </style>

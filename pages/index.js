@@ -53,8 +53,8 @@ const Index = ({ i18n }) => {
         responsive="true"
       />
       <ExamSection />
-      <ToolsSection />
       <BooksSection />
+      <ToolsSection />
       <AdSense.Google
         client={adclient}
         className="adsbygoogle"

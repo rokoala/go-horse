@@ -97,7 +97,6 @@ const SharePage = ({ t }) => (
         width: 38px;
         height: 38px;
         margin-top: -2px;
-        margin-right: -4px;
         background-size: contain;
         background-repeat: no-repeat;
       }

@@ -11,9 +11,8 @@ export default ({ refProp }) => {
       <style jsx>
         {`
           section {
-            background: #f5d7b0;
             color: black;
-            height: 390px;
+            height: 260px;
             font-size: 20px;
           }
           .content {
@@ -26,7 +25,7 @@ export default ({ refProp }) => {
             margin: 20px;
             line-height: 30px;
             font-family: Weston;
-            font-size: 25px;
+            font-size: 22px;
             color: #924116;
           }
           p {
