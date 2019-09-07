@@ -34,6 +34,7 @@ const Index = ({ i18n }) => {
       <Hero />
       <AboutSection refProp={refWhatIs} />
       <Axiom />
+      <SpeedSection refProp={refSpeed} />
       <AdSense.Google
         className="adsbygoogle"
         client={adclient}
@@ -42,7 +43,6 @@ const Index = ({ i18n }) => {
         format="auto"
         responsive="true"
       />
-      <SpeedSection refProp={refSpeed} />
       <CowboyCoderSection />
       <AdSense.Google
         className="adsbygoogle"
