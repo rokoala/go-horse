@@ -11,4 +11,3 @@ export { default as Button } from "./button";
 export { default as Header } from "./header";
 export { default as Footer } from "./footer";
 export { default as Blink } from "./blink";
-export { default as IndexHead } from "./indexHead";
