@@ -160,7 +160,6 @@ class Exam extends React.PureComponent {
               {`
                 section {
                   display: flex;
-                  height: 100vh;
                   margin: 20px;
                   flex-direction: column;
                   justify-content: center;
