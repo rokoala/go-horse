@@ -10,7 +10,11 @@ import {
 
 const SharePage = ({ t }) => (
   <React.Fragment>
-    <a href={`https://wa.me/?text=https://xgohorse.com`} className="whatsapp" />
+    <a
+      href={`https://wa.me/?text=https://xgohorse.com`}
+      target="_blank"
+      className="whatsapp"
+    />
     <FacebookShareButton url={`https://xgohorse.com`} quote={t("share-page")}>
       <svg viewBox="0 0 64 64" width="32" height="32">
         <g>
