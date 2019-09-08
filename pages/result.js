@@ -49,11 +49,11 @@ export default withRouter(({ router }) => {
             }
           `}
         </style>
-      </div>{" "}
+      </div>
       <AdSense.Google
         client={adclient}
         slot="2917452006"
-        style={{ display: "block" }}
+        style={{ display: "block", width: "100%", textAlign: "center" }}
         format="auto"
         responsive="true"
       />
