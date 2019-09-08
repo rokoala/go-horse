@@ -156,29 +156,6 @@ class Exam extends React.PureComponent {
                     </button>
                   )}
             </div>
-
-            <AdSense.Google
-              client={adclient}
-              slot="6724162623"
-              style={{ display: "block" }}
-              format="auto"
-              responsive="true"
-            />
-            <p className="just-finish">
-              {questionIndex === 0 &&
-                questions[questionIndex].selection === "" && (
-                  <Link
-                    href={{
-                      pathname: "/result",
-                      query: { finish: true, name: router.query.name }
-                    }}
-                    as="/result"
-                  >
-                    <button>{t("just-finish")}</button>
-                  </Link>
-                )}
-            </p>
-
             <style jsx>
               {`
                 section {
@@ -188,9 +165,6 @@ class Exam extends React.PureComponent {
                   flex-direction: column;
                   justify-content: center;
                   align-items: center;
-                }
-                .just-finish {
-                  margin-top: auto;
                 }
                 .question {
                   margin: 15px;
@@ -207,6 +181,32 @@ class Exam extends React.PureComponent {
               `}
             </style>
           </section>
+          <AdSense.Google
+            client={adclient}
+            slot="6724162623"
+            style={{ display: "block" }}
+            format="auto"
+            responsive="true"
+          />
+          <p className="just-finish">
+            {questionIndex === 0 && questions[questionIndex].selection === "" && (
+              <Link
+                href={{
+                  pathname: "/result",
+                  query: { finish: true, name: router.query.name }
+                }}
+                as="/result"
+              >
+                <button>{t("just-finish")}</button>
+              </Link>
+            )}
+            <style jsx>
+              {`
+                margin-top: auto;
+                text-align: center;
+              `}
+            </style>
+          </p>
         </>
       );
     }
