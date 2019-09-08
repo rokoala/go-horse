@@ -20,14 +20,36 @@ export default withRouter(({ router }) => {
   }
 
   return (
-    <div className="content">
-      <Head title="XGH Certification" />
-      <header>
-        <h1>
-          <a href="/">eXtreme GoHorse Certification</a>
-        </h1>
-      </header>
-      {userResult}
+    <>
+      <div className="content">
+        <Head title="XGH Certification" />
+        <header>
+          <h1>
+            <a href="/">eXtreme GoHorse Certification</a>
+          </h1>
+        </header>
+        {userResult}
+        <style jsx>
+          {`
+            header {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              text-align: center;
+            }
+            .content {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+            }
+            h1 {
+              font-family: Weston;
+              color: brown;
+            }
+          `}
+        </style>
+      </div>{" "}
       <AdSense.Google
         client={adclient}
         slot="2917452006"
@@ -35,26 +57,6 @@ export default withRouter(({ router }) => {
         format="auto"
         responsive="true"
       />
-      <style jsx>
-        {`
-          header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-          }
-          .content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-          }
-          h1 {
-            font-family: Weston;
-            color: brown;
-          }
-        `}
-      </style>
-    </div>
+    </>
   );
 });
