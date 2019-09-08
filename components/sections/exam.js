@@ -19,10 +19,6 @@ export default ({ refProp }) => {
     <>
       <section ref={refProp} className="content">
         <h3 className="section-title">{t("dotheexam-title")}</h3>
-        <h4>
-          <Blink speed="1s">{t("dotheexam")}</Blink>
-        </h4>
-        <p>{t("blink-recommendation")}</p>
         <form
           onSubmit={e => {
             e.preventDefault();
@@ -80,7 +76,7 @@ export default ({ refProp }) => {
           text-align: center;
           color: red;
           font-size: 20px;
-          margin-bottom: 0;
+          margin-bottom: 10px;
         }
       `}</style>
     </>

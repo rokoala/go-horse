@@ -2,7 +2,7 @@ import React from "react";
 
 class Timer extends React.PureComponent {
   state = {
-    minutes: "02",
+    minutes: "20",
     seconds: "34",
     interval: null
   };

@@ -1,8 +1,10 @@
 import { withTranslation } from "react-i18next";
-import { Head, Timer } from "../components";
+import { Head } from "../components";
 import Link from "next/link";
 import { withRouter } from "next/router";
 import ReactGA from "react-ga";
+import AdSense from "react-adsense";
+const adclient = "ca-pub-1462658131006885";
 
 const QUESTION_ACTION = {
   BACK: -1,
@@ -98,15 +100,6 @@ class Exam extends React.PureComponent {
       questions
     });
   };
-  handleTimeOver = () => {
-    alert("TIME IS OVER");
-    const { router } = this.props;
-    const result = this.result();
-    router.push({
-      pathname: "/result",
-      query: { result, name: router.query.name }
-    });
-  };
   render() {
     const { router, t } = this.props;
     const { questions, questionIndex } = this.state;
@@ -116,95 +109,105 @@ class Exam extends React.PureComponent {
       return <div />;
     } else {
       return (
-        <section>
+        <>
           <Head title="XGH Certification" />
-          <h2>Time Left</h2>
-          <Timer onTimeOver={this.handleTimeOver} />
-          <h2>
-            {t("question")} #{questionIndex + 1}
-          </h2>
-          <div className="question">
-            <b>{t(questions[questionIndex].title)}</b>
-          </div>
-          <div className="items">
-            {questions[questionIndex].items.map((item, index) => (
-              <React.Fragment key={`${index}`}>
-                <div className="input-wrapper">
-                  <input
-                    type="radio"
-                    checked={questions[questionIndex].selection === item}
-                    value={`${item}`}
-                    id={`${index}`}
-                    onChange={this.handleRadio}
-                  />
-                  <label htmlFor={`${index}`}>{t(item)}</label>
-                </div>
-              </React.Fragment>
-            ))}
-          </div>
-          <div className="buttons">
-            {questionIndex > 0 && (
-              <button onClick={this.handleClickQuestion(QUESTION_ACTION.BACK)}>
-                {t("back")}
-              </button>
-            )}
-            {questionIndex === questions.length - 1
-              ? questions[questionIndex].selection !== "" && (
-                  <button onClick={this.handleClickFinish}>
-                    {t("finish")}
-                  </button>
-                )
-              : questions[questionIndex].selection !== "" && (
-                  <button
-                    onClick={this.handleClickQuestion(QUESTION_ACTION.NEXT)}
+          <section>
+            <h2>
+              {t("question")} #{questionIndex + 1}
+            </h2>
+            <div className="question">
+              <b>{t(questions[questionIndex].title)}</b>
+            </div>
+            <div className="items">
+              {questions[questionIndex].items.map((item, index) => (
+                <React.Fragment key={`${index}`}>
+                  <div className="input-wrapper">
+                    <input
+                      type="radio"
+                      checked={questions[questionIndex].selection === item}
+                      value={`${item}`}
+                      id={`${index}`}
+                      onChange={this.handleRadio}
+                    />
+                    <label htmlFor={`${index}`}>{t(item)}</label>
+                  </div>
+                </React.Fragment>
+              ))}
+            </div>
+            <div className="buttons">
+              {questionIndex > 0 && (
+                <button
+                  onClick={this.handleClickQuestion(QUESTION_ACTION.BACK)}
+                >
+                  {t("back")}
+                </button>
+              )}
+              {questionIndex === questions.length - 1
+                ? questions[questionIndex].selection !== "" && (
+                    <button onClick={this.handleClickFinish}>
+                      {t("finish")}
+                    </button>
+                  )
+                : questions[questionIndex].selection !== "" && (
+                    <button
+                      onClick={this.handleClickQuestion(QUESTION_ACTION.NEXT)}
+                    >
+                      {t("next")}
+                    </button>
+                  )}
+            </div>
+
+            <AdSense.Google
+              client={adclient}
+              slot="6724162623"
+              style={{ display: "flex", justifyContent: "center" }}
+              format="auto"
+              responsive="true"
+            />
+            <p className="just-finish">
+              {questionIndex === 0 &&
+                questions[questionIndex].selection === "" && (
+                  <Link
+                    href={{
+                      pathname: "/result",
+                      query: { finish: true, name: router.query.name }
+                    }}
+                    as="/result"
                   >
-                    {t("next")}
-                  </button>
+                    <button>{t("just-finish")}</button>
+                  </Link>
                 )}
-          </div>
+            </p>
 
-          <p className="just-finish">
-            {questionIndex === 0 && questions[questionIndex].selection === "" && (
-              <Link
-                href={{
-                  pathname: "/result",
-                  query: { finish: true, name: router.query.name }
-                }}
-                as="/result"
-              >
-                <button>{t("just-finish")}</button>
-              </Link>
-            )}
-          </p>
-
-          <style jsx>
-            {`
-              section {
-                display: flex;
-                height: 100vh;
-                margin: 20px;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-              }
-              .just-finish {
-                margin-top: auto;
-              }
-              .question {
-                margin: 15px;
-              }
-              .items {
-                margin: 10px;
-              }
-              .input-wrapper {
-                margin: 15px 0px;
-              }
-              .buttons {
-                margin-bottom: 50px;
-              }
-            `}
-          </style>
-        </section>
+            <style jsx>
+              {`
+                section {
+                  display: flex;
+                  height: 100vh;
+                  margin: 20px;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                }
+                .just-finish {
+                  margin-top: auto;
+                }
+                .question {
+                  margin: 15px;
+                }
+                .items {
+                  margin: 10px;
+                }
+                .input-wrapper {
+                  margin: 15px 0px;
+                }
+                .buttons {
+                  margin-bottom: 50px;
+                }
+              `}
+            </style>
+          </section>
+        </>
       );
     }
   }

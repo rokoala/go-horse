@@ -110,6 +110,7 @@ const CustomHead = ({ title, t }) => (
     <style jsx global>
       {`
         @import url("https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap");
+        @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
         * {
           box-sizing: border-box;

@@ -36,7 +36,6 @@ const Index = ({ i18n }) => {
       <Axiom />
       <SpeedSection refProp={refSpeed} />
       <AdSense.Google
-        className="adsbygoogle"
         client={adclient}
         slot="3286097608"
         style={{ display: "flex", justifyContent: "center" }}
@@ -45,7 +44,6 @@ const Index = ({ i18n }) => {
       />
       <CowboyCoderSection />
       <AdSense.Google
-        className="adsbygoogle"
         client={adclient}
         slot="6724162623"
         style={{ display: "flex", justifyContent: "center" }}
@@ -57,7 +55,6 @@ const Index = ({ i18n }) => {
       <ToolsSection />
       <AdSense.Google
         client={adclient}
-        className="adsbygoogle"
         slot="4615491145"
         style={{ display: "flex", justifyContent: "center" }}
         format="auto"
