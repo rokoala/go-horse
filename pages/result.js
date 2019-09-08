@@ -48,7 +48,6 @@ export default withRouter(({ router }) => {
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            height: 100vh;
           }
           h1 {
             font-family: Weston;
