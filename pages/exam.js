@@ -183,7 +183,7 @@ class Exam extends React.PureComponent {
           <AdSense.Google
             client={adclient}
             slot="6724162623"
-            style={{ display: "block" }}
+            style={{ display: "block", width: "100%", textAlign: "center" }}
             format="auto"
             responsive="true"
           />
