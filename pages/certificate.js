@@ -15,7 +15,7 @@ import {
   EmailShareButton
 } from "react-share";
 
-const API_URL = "http://xgohorse.com";
+const API_URL = "https://xgohorse.com";
 
 class Certificate extends React.PureComponent {
   state = {

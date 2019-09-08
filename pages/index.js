@@ -43,6 +43,7 @@ const Index = ({ i18n }) => {
         responsive="true"
       />
       <CowboyCoderSection />
+      <ExamSection />
       <AdSense.Google
         client={adclient}
         slot="6724162623"
@@ -50,7 +51,6 @@ const Index = ({ i18n }) => {
         format="auto"
         responsive="true"
       />
-      <ExamSection />
       <BooksSection />
       <ToolsSection />
       <AdSense.Google
