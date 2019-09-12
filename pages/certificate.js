@@ -1,6 +1,6 @@
 import { withTranslation } from "react-i18next";
 import Link from "next/link";
-import { withRouter } from "next/router";
+import { withRouter, useRouter } from "next/router";
 import { Head } from "../components";
 import SimpleCrypto from "simple-crypto-js";
 import { CopyToClipboard } from "react-copy-to-clipboard";
@@ -17,9 +17,23 @@ import {
 
 const API_URL = "https://xgohorse.com";
 
+const getParams = function(url) {
+  var params = {};
+  var parser = document.createElement("a");
+  parser.href = url;
+  var query = parser.search.substring(1);
+  var vars = query.split("&");
+  for (var i = 0; i < vars.length; i++) {
+    var pair = vars[i].split("=");
+    params[pair[0]] = decodeURIComponent(pair[1]);
+  }
+  return params;
+};
+
 class Certificate extends React.PureComponent {
   state = {
     userkey: "",
+    name: "",
     showShareButtons: true
   };
   getFormattedDate = () => {
@@ -32,15 +46,16 @@ class Certificate extends React.PureComponent {
   componentDidMount() {
     const { router } = this.props;
 
+    const user = getParams(window.location.href).user;
+
     ReactGA.initialize("UA-137508594-1");
     ReactGA.pageview(document.location.pathname);
-    if (router.query.user) {
+    if (user) {
+      this.setState({ name: simpleCrypto.decrypt(decodeURIComponent(user)) });
       this.setState({ showShareButtons: false });
-      router.query.name = simpleCrypto.decrypt(
-        decodeURIComponent(router.query.user)
-      );
     } else {
       const plainText = router.query.name || "";
+      this.setState({ name: router.query.name });
       simpleCrypto.encrypt(plainText);
       var cipherText = simpleCrypto.encrypt(plainText);
       this.setState({
@@ -55,7 +70,7 @@ class Certificate extends React.PureComponent {
         <Head title="XGH Certification" />
         <div className="certificate">
           <div className="cursive">{t("this-certify")}</div>
-          <h2 className="cursive name">{router.query.name}</h2>
+          <h2 className="cursive name">{this.state.name}</h2>
           <div className="cursive">{t("has-achieved")}</div>
           <div className="go-horse-title">
             eXtreme GoHorse Process Certificate
@@ -79,7 +94,7 @@ class Certificate extends React.PureComponent {
             <h3>{t("share")}</h3>
             <div className="share-buttons">
               <a
-                href={`https://wa.me/?text=http%3A%2F%2Fxgohorse.com%2Fcertificate%3Fuser%3D${this.state.userkey}`}
+                href={`https://api.whatsapp.com/send?text=http%3A%2F%2Fxgohorse.com%2Fcertificate%3Fuser%3D${this.state.userkey}`}
                 target="_blank"
                 className="whatsapp"
               />
