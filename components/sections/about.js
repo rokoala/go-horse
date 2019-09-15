@@ -20,9 +20,10 @@ export default ({ refProp }) => {
             flex-direction: column;
             justify-content: center;
             text-align: center;
+            padding: 20px;
+            margin: 30px 0px;
           }
           h3 {
-            margin: 20px;
             line-height: 30px;
             font-family: Weston;
             font-size: 22px;
@@ -30,7 +31,6 @@ export default ({ refProp }) => {
           }
           p {
             line-height: 30px;
-            padding: 20px;
           }
         `}
       </style>
