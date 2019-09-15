@@ -1,8 +1,8 @@
 import Router from "next/router";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Blink } from "../";
 import Button from "../button";
+import Fade from "react-reveal/Fade";
 
 export default ({ refProp }) => {
   const { t } = useTranslation("exam");
@@ -17,43 +17,45 @@ export default ({ refProp }) => {
 
   return (
     <>
-      <section ref={refProp} className="content">
-        <h3 className="section-title">{t("dotheexam-title")}</h3>
-        <form
-          onSubmit={e => {
-            e.preventDefault();
-          }}
-        >
-          <input
-            type="text"
-            autoCapitalize="true"
-            onChange={e => {
-              if (e.target.value.trim() !== "") {
-                setEnableButton(true);
-              } else {
-                setEnableButton(false);
-              }
-              setName(e.target.value.trim());
+      <Fade>
+        <section ref={refProp} className="content">
+          <h3 className="section-title">{t("dotheexam-title")}</h3>
+          <form
+            onSubmit={e => {
+              e.preventDefault();
             }}
-            placeholder={t("name")}
-          />
-          <Button
-            style={
-              enableButton
-                ? {}
-                : {
-                    backgroundColor: "lightgray",
-                    borderBottom: "lightgray",
-                    boxShadow: "none",
-                    cursor: "no-drop"
-                  }
-            }
-            onClick={go}
           >
-            {t("begin")}
-          </Button>
-        </form>
-      </section>
+            <input
+              type="text"
+              autoCapitalize="true"
+              onChange={e => {
+                if (e.target.value.trim() !== "") {
+                  setEnableButton(true);
+                } else {
+                  setEnableButton(false);
+                }
+                setName(e.target.value.trim());
+              }}
+              placeholder={t("name")}
+            />
+            <Button
+              style={
+                enableButton
+                  ? {}
+                  : {
+                      backgroundColor: "lightgray",
+                      borderBottom: "lightgray",
+                      boxShadow: "none",
+                      cursor: "no-drop"
+                    }
+              }
+              onClick={go}
+            >
+              {t("begin")}
+            </Button>
+          </form>
+        </section>
+      </Fade>
       <style jsx>{`
         form {
           display: flex;

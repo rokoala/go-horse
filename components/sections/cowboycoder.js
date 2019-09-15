@@ -1,37 +1,47 @@
 import { withTranslation } from "react-i18next";
+import Slide from "react-reveal/Slide";
 
 const CowboyCoder = ({ t }) => (
   <section>
     <h3 className="section-title">{t("cowboy-coder-title")}</h3>
+
     <div className="section-content">
-      <article>
-        <h4 className="title">Cowboy Coder</h4>
-        <div className="content">
-          <img src="/static/images/cowboy-coder.svg"></img>
-          <p className="description">
-            <span>{t("cowboy-coder-description")}</span>{" "}
-            <a className="reference" href="https://wapu.us/wapuu/cowboy-coder/">
-              Wapuus
-            </a>
+      <Slide right>
+        <article>
+          <h4 className="title">Cowboy Coder</h4>
+          <div className="content">
+            <img src="/static/images/cowboy-coder.svg"></img>
+            <p className="description">
+              <span>{t("cowboy-coder-description")}</span>{" "}
+              <a
+                className="reference"
+                href="https://wapu.us/wapuu/cowboy-coder/"
+              >
+                Wapuus
+              </a>
+            </p>
+          </div>
+        </article>
+      </Slide>
+      <Slide left>
+        <article>
+          <h4 className="title">Programming Mother***cker</h4>
+          <p className="description mf-description">
+            "We are a community of *** programmers who have been humiliated by
+            software development methodologies for years. We are tired of XP,
+            Scrum, Kanban, Waterfall, Software Craftsmanship (aka XP-Lite) and
+            anything else getting in the way of..."
           </p>
-        </div>
-      </article>
-      <article>
-        <h4 className="title">Programming Mother***cker</h4>
-        <p className="description mf-description">
-          "We are a community of *** programmers who have been humiliated by
-          software development methodologies for years. We are tired of XP,
-          Scrum, Kanban, Waterfall, Software Craftsmanship (aka XP-Lite) and
-          anything else getting in the way of..."
-        </p>
-        <a
-          className="reference reference-pmf"
-          href="http://programming-motherfucker.com/"
-        >
-          Programming Mother***cker
-        </a>
-      </article>
+          <a
+            className="reference reference-pmf"
+            href="http://programming-motherfucker.com/"
+          >
+            Programming Mother***cker
+          </a>
+        </article>
+      </Slide>
     </div>
+
     <style jsx>
       {`
         .section-content {
@@ -39,7 +49,7 @@ const CowboyCoder = ({ t }) => (
           width: 100%;
           flex-direction: row;
           flex-wrap: wrap;
-          justify-content: space-around;
+          justify-content: space-evenly;
         }
         article {
           display: flex;

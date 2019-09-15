@@ -1,12 +1,15 @@
 import { useTranslation } from "react-i18next";
+import Reveal from "react-reveal/Reveal";
 
 export default ({ refProp }) => {
   const { t } = useTranslation("about");
   return (
     <>
       <section ref={refProp} className="content">
-        <h3>{t("what-is-title")}</h3>
-        <p>{t("what-is")}</p>
+        <Reveal>
+          <h3>{t("what-is-title")}</h3>
+          <p>{t("what-is")}</p>
+        </Reveal>
       </section>
       <style jsx>
         {`

@@ -1,24 +1,33 @@
+import Fade from "react-reveal/Fade";
+
 export default ({ refProp }) => (
   <>
-    <section ref={refProp} className="speed-container">
-      <h3 className="section-title">Benchmark</h3>
-      <div className="speed-comparison">
-        <div className="finish">FINISH</div>
-        <div className="running-track">
-          <marquee className="grass">🐎 ITIL</marquee>
-          <marquee className="grass" scrolldelay="55" truespeed="55">
-            🐎 SCRUM
-          </marquee>
-          <marquee className="xgh-horse grass" scrolldelay="15" truespeed="15">
-            🎠 EXTREME GOHORSE
-          </marquee>
-          <marquee className="grass">🐎COBIT</marquee>
-          <marquee scrollamount="2" direction="right">
-            PMBOK 🐎
-          </marquee>
+    <Fade>
+      <section ref={refProp} className="speed-container">
+        <h3 className="section-title">Benchmark</h3>
+        <div className="speed-comparison">
+          <div className="finish">FINISH</div>
+          <div className="running-track">
+            ``
+            <marquee className="grass">🐎 ITIL</marquee>
+            <marquee className="grass" scrolldelay="55" truespeed="55">
+              🐎 SCRUM
+            </marquee>
+            <marquee
+              className="xgh-horse grass"
+              scrolldelay="15"
+              truespeed="15"
+            >
+              🎠 EXTREME GOHORSE
+            </marquee>
+            <marquee className="grass">🐎COBIT</marquee>
+            <marquee scrollamount="2" direction="right">
+              PMBOK 🐎
+            </marquee>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </Fade>
     <style jsx>{`
       .speed-container {
         width: 100%;

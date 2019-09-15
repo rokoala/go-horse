@@ -1,11 +1,15 @@
+import Fade from "react-reveal/Fade";
+
 export default () => {
   return (
     <>
       <div className="hero">
         <div className="hero-background" />
         <div className="hero-text">
-          <div className="title">free the horse inside you</div>
-          <p className="phrase-1">Extreme GoHorse Process</p>
+          <Fade>
+            <div className="title">free the horse inside you</div>
+            <p className="subtitle">Extreme GoHorse Process</p>
+          </Fade>
         </div>
       </div>
       <style jsx>
@@ -51,13 +55,21 @@ export default () => {
             border: 10px double black;
             box-shadow: 0px 15px 10px -3px #3e312b;
           }
-          .phrase-1 {
+          .subtitle {
             text-align: center;
             font-family: Weston;
             font-size: 0.8rem;
             margin: 2.5rem 0;
             color: gold;
             text-shadow: 1px 1px 10px #9c8922;
+          }
+          .subtitle-exited,
+          .subtitle-entering {
+            opacity: 0.01;
+          }
+          .subtitle-entered {
+            opacity: 1;
+            transition: opacity 1000ms ease-in;
           }
         `}
       </style>
