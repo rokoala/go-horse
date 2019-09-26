@@ -8,11 +8,11 @@ import {
   CowboyCoderSection,
   ToolsSection
 } from "../components/sections";
-import AdSense from "react-adsense";
-import ReactGA from "react-ga";
+// import AdSense from "react-adsense";
+// import ReactGA from "react-ga";
 import { Axiom } from "../components";
 import { withTranslation } from "react-i18next";
-const adclient = "ca-pub-1462658131006885";
+// const adclient = "ca-pub-1462658131006885";
 
 const Index = ({ i18n }) => {
   const refWhatIs = useRef(null);
@@ -23,8 +23,8 @@ const Index = ({ i18n }) => {
     //   google_ad_client: "ca-pub-1462658131006885",
     //   enable_page_level_ads: true
     // });
-    ReactGA.initialize("UA-137508594-1");
-    ReactGA.pageview(document.location.pathname);
+    // ReactGA.initialize("UA-137508594-1");
+    // ReactGA.pageview(document.location.pathname);
   }, []);
 
   return (
@@ -35,31 +35,31 @@ const Index = ({ i18n }) => {
       <AboutSection refProp={refWhatIs} />
       <Axiom />
       <SpeedSection refProp={refSpeed} />
-      <AdSense.Google
+      {/* <AdSense.Google
         client={adclient}
         slot="3286097608"
         style={{ display: "flex", justifyContent: "center" }}
         format="auto"
         responsive="true"
-      />
+      /> */}
       <CowboyCoderSection />
       <ExamSection />
-      <AdSense.Google
+      {/* <AdSense.Google
         client={adclient}
         slot="6724162623"
         style={{ display: "flex", justifyContent: "center" }}
         format="auto"
         responsive="true"
-      />
+      /> */}
       <BooksSection />
       <ToolsSection />
-      <AdSense.Google
+      {/* <AdSense.Google
         client={adclient}
         slot="4615491145"
         style={{ display: "flex", justifyContent: "center" }}
         format="auto"
         responsive="true"
-      />
+      /> */}
       <Footer />
     </>
   );

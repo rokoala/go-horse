@@ -1,7 +1,7 @@
 import { SharePage } from "./";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
-
+import { Donate } from "../components";
 export default () => {
   const { t } = useTranslation("index");
   return (
@@ -13,6 +13,7 @@ export default () => {
         <a className="contact" href="mailto:xghcertification@gmail.com">
           {t("contact-us")}
         </a>
+        <Donate />
         <div className="share-buttons">
           <SharePage />
         </div>

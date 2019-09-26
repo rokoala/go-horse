@@ -3,8 +3,8 @@ import { Head } from "../components";
 import Link from "next/link";
 import { withRouter } from "next/router";
 import ReactGA from "react-ga";
-import AdSense from "react-adsense";
-const adclient = "ca-pub-1462658131006885";
+// import AdSense from "react-adsense";
+// const adclient = "ca-pub-1462658131006885";
 
 const QUESTION_ACTION = {
   BACK: -1,
@@ -180,13 +180,13 @@ class Exam extends React.PureComponent {
               `}
             </style>
           </section>
-          <AdSense.Google
+          {/* <AdSense.Google
             client={adclient}
             slot="2652538754"
             style={{ display: "block", width: "100%", textAlign: "center" }}
             format="auto"
             responsive="true"
-          />
+          /> */}
           <p className="just-finish">
             {questionIndex === 0 && questions[questionIndex].selection === "" && (
               <Link

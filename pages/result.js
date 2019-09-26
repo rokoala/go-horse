@@ -1,8 +1,8 @@
 import React from "react";
 import { withRouter } from "next/router";
 import { Head, SpecialResult, FailureResult, Result } from "../components";
-import AdSense from "react-adsense";
-const adclient = "ca-pub-1462658131006885";
+// import AdSense from "react-adsense";
+// const adclient = "ca-pub-1462658131006885";
 
 export default withRouter(({ router }) => {
   let userResult;
@@ -50,13 +50,13 @@ export default withRouter(({ router }) => {
           `}
         </style>
       </div>
-      <AdSense.Google
+      {/* <AdSense.Google
         client={adclient}
         slot="2917452006"
         style={{ display: "block", width: "100%", textAlign: "center" }}
         format="auto"
         responsive="true"
-      />
+      /> */}
     </>
   );
 });

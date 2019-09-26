@@ -87,25 +87,25 @@ const CustomHead = ({ title, t }) => (
       <link rel="manifest" href="/static/logo/manifest.json" />
       <meta name="msapplication-TileColor" content="#ffffff" />
       <meta content={t("description")} name="description" />
-      <meta
+      {/* <meta
         name="google-site-verification"
         content="147-nQUSKLX1iEG5VD9ByUCwyNW4i2JmMUd8OlOcrOY"
-      />
+      /> */}
       <meta
         name="msapplication-TileImage"
         content="/static/logo/ms-icon-144x144.png"
       />
       <meta name="theme-color" content="#ffffff" />
       <title>{title}</title>
-      <script
+      {/* <script
         async
         src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-      />
-      <script
+      /> */}
+      {/* <script
         async
         custom-element="amp-ad"
         src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
-      ></script>
+      ></script> */}
     </Head>
     <style jsx global>
       {`
