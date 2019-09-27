@@ -2,7 +2,7 @@ import { withTranslation } from "react-i18next";
 import { Head } from "../components";
 import Link from "next/link";
 import { withRouter } from "next/router";
-import ReactGA from "react-ga";
+// import ReactGA from "react-ga";
 // import AdSense from "react-adsense";
 // const adclient = "ca-pub-1462658131006885";
 
@@ -68,8 +68,8 @@ class Exam extends React.PureComponent {
     questionIndex: 0
   };
   componentDidMount() {
-    ReactGA.initialize("UA-137508594-1");
-    ReactGA.pageview(document.location.pathname);
+    // ReactGA.initialize("UA-137508594-1");
+    // ReactGA.pageview(document.location.pathname);
   }
   result = () =>
     this.state.questions.reduce((prevVal, question) => {
