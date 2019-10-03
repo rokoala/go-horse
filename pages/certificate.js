@@ -1,10 +1,9 @@
 import { withTranslation } from "react-i18next";
 import Link from "next/link";
-import { withRouter, useRouter } from "next/router";
+import { withRouter } from "next/router";
 import { Head } from "../components";
 import SimpleCrypto from "simple-crypto-js";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-// import ReactGA from "react-ga";
 
 import {
   FacebookShareButton,
@@ -48,8 +47,6 @@ class Certificate extends React.PureComponent {
 
     const user = getParams(window.location.href).user;
 
-    // ReactGA.initialize("UA-137508594-1");
-    // ReactGA.pageview(document.location.pathname);
     if (user) {
       this.setState({ name: simpleCrypto.decrypt(decodeURIComponent(user)) });
       this.setState({ showShareButtons: false });
@@ -64,7 +61,7 @@ class Certificate extends React.PureComponent {
     }
   }
   render() {
-    const { t, router } = this.props;
+    const { t } = this.props;
     return (
       <div className="content">
         <Head title="XGH Certification" />

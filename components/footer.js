@@ -1,19 +1,21 @@
 import { SharePage } from "./";
 import Link from "next/link";
-import { useTranslation } from "react-i18next";
-import { Donate } from "../components";
-export default () => {
+import { useTranslation, withTranslation } from "react-i18next";
+
+const Footer = ({ i18n }) => {
   const { t } = useTranslation("index");
   return (
     <>
       <footer>
-        <Link href={"/termsofservice-pt"}>
+        <Link href={"/termsofservice-" + i18n.language}>
           <a>{t("terms-of-service")}</a>
+        </Link>
+        <Link href={"/privacypolicy"}>
+          <a>{t("privacy-policy")}</a>
         </Link>
         <a className="contact" href="mailto:xghcertification@gmail.com">
           {t("contact-us")}
         </a>
-        <Donate />
         <div className="share-buttons">
           <SharePage />
         </div>
@@ -49,3 +51,5 @@ export default () => {
     </>
   );
 };
+
+export default withTranslation()(Footer);

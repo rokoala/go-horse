@@ -1,9 +1,12 @@
+import { Head } from "../components";
+
 export default () => {
   return (
     <React.Fragment>
+      <Head title="XGH Certification"></Head>
       <div className="content">
         <h1>
-          <a href="/">eXtreme GoHorse Process</a>
+          <a href="/">XGH Certification</a>
         </h1>
         <h2>Terms of Service</h2>
         <p>
@@ -79,19 +82,10 @@ export default () => {
               </li>
             </ol>
           </li>
-          <li>
-            Payments
-            <ol>
-              <li>
-                We accept donations to maintain our servers and to provide more
-                creative services for users.
-              </li>
-            </ol>
-          </li>
         </ol>
         <h3>Contact</h3>
         <p>xghcertification@gmail.com</p>
-        <p>Last Review March 29, 2019</p>
+        <p>Last Review October 2, 2019</p>
         <style jsx>{`
           .content {
             display: flex;

@@ -87,25 +87,21 @@ const CustomHead = ({ title, t }) => (
       <link rel="manifest" href="/static/logo/manifest.json" />
       <meta name="msapplication-TileColor" content="#ffffff" />
       <meta content={t("description")} name="description" />
-      {/* <meta
-        name="google-site-verification"
-        content="147-nQUSKLX1iEG5VD9ByUCwyNW4i2JmMUd8OlOcrOY"
-      /> */}
       <meta
         name="msapplication-TileImage"
         content="/static/logo/ms-icon-144x144.png"
       />
       <meta name="theme-color" content="#ffffff" />
+      <script
+        src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"
+        data-cfasync="false"
+      ></script>
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"
+      />
       <title>{title}</title>
-      {/* <script
-        async
-        src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-      /> */}
-      {/* <script
-        async
-        custom-element="amp-ad"
-        src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"
-      ></script> */}
     </Head>
     <style jsx global>
       {`
@@ -160,6 +156,12 @@ const CustomHead = ({ title, t }) => (
           margin: 5px auto;
           opacity: 0.5;
           width: 300px;
+        }
+        .cc-deny {
+          display: none !important;
+        }
+        .cc-revoke {
+          display: none !important;
         }
       `}
     </style>
