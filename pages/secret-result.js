@@ -21,9 +21,6 @@ export default ({ name }) => {
         <button className="print" onClick={getCertificate(name || "hackerman")}>
           {t("print-certificate")}
         </button>
-        <div className="donate">
-          <Donate />
-        </div>
       </section>
       <style jsx>{`
         section {
