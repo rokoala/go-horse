@@ -10,7 +10,7 @@ const Footer = ({ i18n }) => {
         <Link href={"/termsofservice-" + i18n.language}>
           <a>{t("terms-of-service")}</a>
         </Link>
-        <Link href={"/privacypolicy"}>
+        <Link href={"/privacypolicy-" + i18n.language}>
           <a>{t("privacy-policy")}</a>
         </Link>
         <a className="contact" href="mailto:xghcertification@gmail.com">

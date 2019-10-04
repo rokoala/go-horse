@@ -216,9 +216,6 @@ export default () => {
         <a href="https://xgohorse.com">XGH Certification</a>
       </h1>
       <div className="content">
-        <a className="change-lng" href="https://xgohorse.com/privacypolicy-pt">
-          Trocar para Português (PT-br)
-        </a>
         <ReactMarkdown source={markdown} escapeHtml={false} />
         <h3>Delete Cookies from https://xgohorse.com</h3>
         <button
