@@ -17,68 +17,8 @@ const deleteAllCookies = () => {
 
 class MyApp extends App {
   componentDidMount() {
-    window.cookieconsent.initialise({
-      palette: {
-        popup: {
-          background: "#000"
-        },
-        button: {
-          background: "#f1d600"
-        }
-      },
-      theme: "classic",
-      content: {
-        message:
-          "We use cookies to provide our services and for analytics and marketing. By continuing to browse our website, you agree to our use of cookies. To find out more about our use of cookies, please see our ",
-        link: "Privacy policy",
-
-        href: "https://xgohorse.com/privacypolicy"
-      },
-      type: "opt-in",
-      onInitialise: function(status) {
-        var type = this.options.type;
-        var didConsent = this.hasConsented();
-        if (type == "opt-in" && didConsent) {
-          // enable cookies
-          TagManager.initialize({
-            gtmId: "GTM-WX2CMZZ",
-            events: {
-              event: "addGAA"
-            }
-          });
-        }
-        if (type == "opt-out" && !didConsent) {
-          // disable cookies
-          deleteAllCookies();
-        }
-      },
-      onStatusChange: function(status, chosenBefore) {
-        var type = this.options.type;
-        var didConsent = this.hasConsented();
-        if (type == "opt-in" && didConsent) {
-          // enable cookies
-          TagManager.initialize({
-            gtmId: "GTM-WX2CMZZ",
-            events: {
-              event: "addGAA"
-            }
-          });
-        }
-        if (type == "opt-out" && !didConsent) {
-          // disable cookies
-          deleteAllCookies();
-        }
-      },
-      onRevokeChoice: function() {
-        var type = this.options.type;
-        if (type == "opt-in") {
-          // disable cookies
-          deleteAllCookies();
-        }
-        if (type == "opt-out") {
-          // enable cookies
-        }
-      }
+    TagManager.initialize({
+      gtmId: "GTM-WX2CMZZ"
     });
   }
   render() {
