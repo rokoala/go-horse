@@ -1,112 +1,116 @@
-import Head from "next/head";
-import { withTranslation } from "react-i18next";
+import Head from 'next/head';
+import { withTranslation } from 'react-i18next';
 
 const CustomHead = ({ title, t }) => (
   <div>
     <Head>
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta property="og:site_name" content="xGoHorse Certification" />
-      <meta property="og:title" content="xGoHorse Certification" />
-      <meta property="og:description" content="xGoHorse Certification" />
+      <meta name='viewport' content='width=device-width, initial-scale=1' />
+      <meta property='og:site_name' content='xGoHorse Certification' />
+      <meta property='og:title' content='xGoHorse Certification' />
+      <meta property='og:description' content='xGoHorse Certification' />
       <meta
-        property="og:image"
-        itemProp="image"
-        content="https://xgohorse.com/static/logo.png"
+        property='og:image'
+        itemProp='image'
+        content='https://xgohorse.com/static/logo.png'
       />
-      <meta property="og:type" content="website" />
+      <meta property='og:type' content='website' />
       <link
-        rel="apple-touch-icon"
-        sizes="57x57"
-        href="/static/logo/apple-icon-57x57.png"
-      />
-      <link
-        rel="apple-touch-icon"
-        sizes="60x60"
-        href="/static/logo/apple-icon-60x60.png"
+        rel='apple-touch-icon'
+        sizes='57x57'
+        href='/static/logo/apple-icon-57x57.png'
       />
       <link
-        rel="apple-touch-icon"
-        sizes="72x72"
-        href="/static/logo/apple-icon-72x72.png"
+        rel='apple-touch-icon'
+        sizes='60x60'
+        href='/static/logo/apple-icon-60x60.png'
       />
       <link
-        rel="apple-touch-icon"
-        sizes="76x76"
-        href="/static/logo/apple-icon-76x76.png"
+        rel='apple-touch-icon'
+        sizes='72x72'
+        href='/static/logo/apple-icon-72x72.png'
       />
       <link
-        rel="apple-touch-icon"
-        sizes="114x114"
-        href="/static/logo/apple-icon-114x114.png"
+        rel='apple-touch-icon'
+        sizes='76x76'
+        href='/static/logo/apple-icon-76x76.png'
       />
       <link
-        rel="apple-touch-icon"
-        sizes="120x120"
-        href="/static/logo/apple-icon-120x120.png"
+        rel='apple-touch-icon'
+        sizes='114x114'
+        href='/static/logo/apple-icon-114x114.png'
       />
       <link
-        rel="apple-touch-icon"
-        sizes="144x144"
-        href="/static/logo/apple-icon-144x144.png"
+        rel='apple-touch-icon'
+        sizes='120x120'
+        href='/static/logo/apple-icon-120x120.png'
       />
       <link
-        rel="apple-touch-icon"
-        sizes="152x152"
-        href="/static/logo/apple-icon-152x152.png"
+        rel='apple-touch-icon'
+        sizes='144x144'
+        href='/static/logo/apple-icon-144x144.png'
       />
       <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="/static/logo/apple-icon-180x180.png"
+        rel='apple-touch-icon'
+        sizes='152x152'
+        href='/static/logo/apple-icon-152x152.png'
       />
       <link
-        rel="icon"
-        type="image/png"
-        sizes="192x192"
-        href="/static/logo/android-icon-192x192.png"
+        rel='apple-touch-icon'
+        sizes='180x180'
+        href='/static/logo/apple-icon-180x180.png'
       />
       <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/static/logo/favicon-32x32.png"
+        rel='icon'
+        type='image/png'
+        sizes='192x192'
+        href='/static/logo/android-icon-192x192.png'
       />
       <link
-        rel="icon"
-        type="image/png"
-        sizes="96x96"
-        href="/static/logo/favicon-96x96.png"
+        rel='icon'
+        type='image/png'
+        sizes='32x32'
+        href='/static/logo/favicon-32x32.png'
       />
       <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="/static/logo/favicon-16x16.png"
+        rel='icon'
+        type='image/png'
+        sizes='96x96'
+        href='/static/logo/favicon-96x96.png'
       />
-      <link rel="icon" type="image/png" href="/static/favicon.ico" />
-      <link rel="manifest" href="/static/logo/manifest.json" />
-      <meta name="msapplication-TileColor" content="#ffffff" />
-      <meta content={t("description")} name="description" />
+      <link
+        rel='icon'
+        type='image/png'
+        sizes='16x16'
+        href='/static/logo/favicon-16x16.png'
+      />
+      <link rel='icon' type='image/png' href='/static/favicon.ico' />
+      <link rel='manifest' href='/static/logo/manifest.json' />
+      <meta name='msapplication-TileColor' content='#ffffff' />
+      <meta content={t('description')} name='description' />
       <meta
-        name="msapplication-TileImage"
-        content="/static/logo/ms-icon-144x144.png"
+        name='msapplication-TileImage'
+        content='/static/logo/ms-icon-144x144.png'
       />
-      <meta name="theme-color" content="#ffffff" />
+      <meta name='theme-color' content='#ffffff' />
       <script
-        src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"
-        data-cfasync="false"
+        src='https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js'
+        data-cfasync='false'
       ></script>
       <link
-        rel="stylesheet"
-        type="text/css"
-        href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"
+        rel='stylesheet'
+        type='text/css'
+        href='https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css'
       />
       <title>{title}</title>
+      <meta
+        name='google-site-verification'
+        content='147-nQUSKLX1iEG5VD9ByUCwyNW4i2JmMUd8OlOcrOY'
+      />
     </Head>
     <style jsx global>
       {`
-        @import url("https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap");
-        @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+        @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
         * {
           box-sizing: border-box;
@@ -116,21 +120,21 @@ const CustomHead = ({ title, t }) => (
           scroll-behavior: smooth;
         }
         body {
-          font-family: "Quicksand", sans-serif;
+          font-family: 'Quicksand', sans-serif;
           margin: 0;
         }
         @font-face {
           font-family: NexaRust;
-          src: url("/static/fonts/NexaRust.otf");
+          src: url('/static/fonts/NexaRust.otf');
         }
         @font-face {
           font-family: Weston;
-          src: url("/static/fonts/WestonFree-Regular.otf");
+          src: url('/static/fonts/WestonFree-Regular.otf');
         }
         @font-face {
           font-family: Weston;
           font-weight: 100;
-          src: url("/static/fonts/WestonFree-Light.otf");
+          src: url('/static/fonts/WestonFree-Light.otf');
         }
 
         section {
@@ -150,7 +154,7 @@ const CustomHead = ({ title, t }) => (
         }
         .section-title:after {
           border-bottom: 3px double #981c1c;
-          content: "";
+          content: '';
           display: block;
           height: 1px;
           margin: 5px auto;
@@ -168,4 +172,4 @@ const CustomHead = ({ title, t }) => (
   </div>
 );
 
-export default withTranslation("head")(CustomHead);
+export default withTranslation('head')(CustomHead);
